@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Wheels Classifieds</string>
+    <string name="about">About</string>
+    <string name="help">Help</string>
 </resources>
