@@ -33,13 +33,31 @@ public class SignUp extends AppCompatActivity {
 
     public void saveSignUpInfo(View view)
     {
-        if (name.getText().toString().matches("")) {
-            Toast.makeText(this, "Name Field is left empty. Please Enter a valid Name", Toast.LENGTH_SHORT).show();
+        if(name.getText().toString().matches("") && email.getText().toString().matches("") && password.getText().toString().matches("") && confirmPassword.getText().toString().matches(""))
+        {
+            name.setError("Name Field is Empty!");
+            email.setError("Email Field is Empty!");
+            password.setError("Password Field is Empty!");
+            confirmPassword.setError("Confirm Password Field is Empty!");
+            return;
+        }
+        else if (name.getText().toString().matches("")) {
+            //Toast.makeText(this, "Name Field is left empty. Please Enter a valid Name", Toast.LENGTH_SHORT).show();
+            name.setError("Name Field is Empty!");
             return;
         }
         else if (email.getText().toString().matches("")) {
-            Toast.makeText(this, "Email Field is left empty. Please Enter a valid Name", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Email Field is left empty. Please Enter a valid Name", Toast.LENGTH_SHORT).show();
+            email.setError("Email Field is Empty");
             return;
+        }
+        else if(password.getText().toString().matches(""))
+        {
+            password.setError("Password Field is Empty!");
+        }
+        else if(confirmPassword.getText().toString().matches(""))
+        {
+            confirmPassword.setError("Confirm Password Field is Empty!");
         }
         else if(password.getText().toString().equals(confirmPassword.getText().toString()))
         {
@@ -57,7 +75,9 @@ public class SignUp extends AppCompatActivity {
 
         else
         {
-            Toast.makeText(this,"Password mismatched. Please Try again!",Toast.LENGTH_LONG).show();
+            //Toast.makeText(this,"Password mismatched. Please Try again!",Toast.LENGTH_LONG).show();
+            password.setError("Password mismatched");
+            confirmPassword.setError("Confirm Password misamtched!");
         }
     }
 }
