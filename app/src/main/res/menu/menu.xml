@@ -8,5 +8,5 @@
         android:title="@string/help"></item>
     <item
         android:id="@+id/Signup"
-        android:title="Signup"></item>
+        android:title="@string/signup"></item>
 </menu>

@@ -21,14 +21,6 @@ public class SignUp extends AppCompatActivity {
         email = findViewById(R.id.editText2);
         password = findViewById(R.id.editText3);
         confirmPassword = findViewById(R.id.editText4);
-
-        //signUp();
-    }
-
-    public void signUp()
-    {
-        //Toast.makeText(this,password.getText(),Toast.LENGTH_LONG).show();
-
     }
 
     public void saveSignUpInfo(View view)
@@ -42,7 +34,6 @@ public class SignUp extends AppCompatActivity {
             return;
         }
         else if (name.getText().toString().matches("")) {
-            //Toast.makeText(this, "Name Field is left empty. Please Enter a valid Name", Toast.LENGTH_SHORT).show();
             name.setError("Name Field is Empty!");
             return;
         }
@@ -67,8 +58,8 @@ public class SignUp extends AppCompatActivity {
             SharedPreferences.Editor edit = userSignUp.edit();
 
             edit.putString("username", name.getText().toString());
-            edit.putString("email", email.getText().toString());
-            edit.putString("password", password.getText().toString());
+            edit.putString("email1", email.getText().toString());
+            edit.putString("password1", password.getText().toString());
 
             edit.apply();
 
