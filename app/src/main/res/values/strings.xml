@@ -2,4 +2,9 @@
     <string name="app_name">Wheels Classifieds</string>
     <string name="about">About</string>
     <string name="help">Help</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password1">Password</string>
+    <string name="re_type_password">Re-Type Password</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
