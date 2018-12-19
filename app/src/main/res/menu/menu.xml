@@ -6,4 +6,7 @@
     <item
         android:id="@+id/help"
         android:title="@string/help"></item>
+    <item
+        android:id="@+id/Signup"
+        android:title="Signup"></item>
 </menu>

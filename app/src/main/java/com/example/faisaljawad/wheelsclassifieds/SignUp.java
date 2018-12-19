@@ -22,28 +22,34 @@ public class SignUp extends AppCompatActivity {
         password = findViewById(R.id.editText3);
         confirmPassword = findViewById(R.id.editText4);
 
-        signUp();
+        //signUp();
     }
 
     public void signUp()
     {
-        if(password.getText() != confirmPassword.getText())
-        {
-            Toast.makeText(this,"Passwords doesn't match",Toast.LENGTH_LONG).show();
-        }
+        //Toast.makeText(this,password.getText(),Toast.LENGTH_LONG).show();
+
     }
 
     public void saveSignUpInfo(View view)
     {
-        SharedPreferences userSignUp = getSharedPreferences("Info",Context.MODE_PRIVATE);
-        SharedPreferences.Editor edit = userSignUp.edit();
 
-        edit.putString("username",name.getText().toString());
-        edit.putString("email",email.getText().toString());
-        edit.putString("password",password.getText().toString());
+        if(password.getText().toString().equals(confirmPassword.getText().toString()))
+        {
+            SharedPreferences userSignUp = getSharedPreferences("Info", Context.MODE_PRIVATE);
+            SharedPreferences.Editor edit = userSignUp.edit();
 
-        edit.apply();
+            edit.putString("username", name.getText().toString());
+            edit.putString("email", email.getText().toString());
+            edit.putString("password", password.getText().toString());
 
-        Toast.makeText(this,"Sign-Up Successful",Toast.LENGTH_LONG).show();
+            edit.apply();
+
+            Toast.makeText(this, "Sign-Up Successful", Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            Toast.makeText(this,"Password mismatched. Please Try again!",Toast.LENGTH_LONG).show();
+        }
     }
 }
