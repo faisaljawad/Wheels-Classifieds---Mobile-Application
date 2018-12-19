@@ -54,10 +54,12 @@ public class SignUp extends AppCompatActivity {
         else if(password.getText().toString().matches(""))
         {
             password.setError("Password Field is Empty!");
+            return;
         }
         else if(confirmPassword.getText().toString().matches(""))
         {
             confirmPassword.setError("Confirm Password Field is Empty!");
+            return;
         }
         else if(password.getText().toString().equals(confirmPassword.getText().toString()))
         {
