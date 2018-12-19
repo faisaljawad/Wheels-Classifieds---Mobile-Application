@@ -33,8 +33,15 @@ public class SignUp extends AppCompatActivity {
 
     public void saveSignUpInfo(View view)
     {
-
-        if(password.getText().toString().equals(confirmPassword.getText().toString()))
+        if (name.getText().toString().matches("")) {
+            Toast.makeText(this, "Name Field is left empty. Please Enter a valid Name", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        else if (email.getText().toString().matches("")) {
+            Toast.makeText(this, "Email Field is left empty. Please Enter a valid Name", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        else if(password.getText().toString().equals(confirmPassword.getText().toString()))
         {
             SharedPreferences userSignUp = getSharedPreferences("Info", Context.MODE_PRIVATE);
             SharedPreferences.Editor edit = userSignUp.edit();
@@ -47,6 +54,7 @@ public class SignUp extends AppCompatActivity {
 
             Toast.makeText(this, "Sign-Up Successful", Toast.LENGTH_LONG).show();
         }
+
         else
         {
             Toast.makeText(this,"Password mismatched. Please Try again!",Toast.LENGTH_LONG).show();
