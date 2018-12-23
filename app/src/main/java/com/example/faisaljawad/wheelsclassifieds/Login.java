@@ -31,11 +31,14 @@ public class Login extends AppCompatActivity {
         {
             Toast.makeText(this, "No Data Present Currently, Please SignUp Instead", Toast.LENGTH_LONG).show();
         }
-        else {
+        else
+        {
             if (email.equals(userEmail.getText().toString()) && pass.equals(userPassword.getText().toString())) {
-                Intent intention = new Intent(this, Home.class);
+                Intent intention = new Intent(this, SplashScreen.class);
                 startActivity(intention);
-            } else {
+            }
+            else
+            {
                 Toast.makeText(this, "Wrong Username/Passowrd", Toast.LENGTH_LONG).show();
             }
         }

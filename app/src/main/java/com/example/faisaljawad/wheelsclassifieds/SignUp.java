@@ -65,6 +65,8 @@ public class SignUp extends AppCompatActivity {
             edit.apply();
 
             Toast.makeText(this, "Sign-Up Successful", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(this, Login.class);
+            startActivity(i);
         }
 
         else
