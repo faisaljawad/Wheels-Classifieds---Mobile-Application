@@ -30,6 +30,12 @@ public class Home extends AppCompatActivity {
             Intent i = new Intent(this, SignUp.class);
             startActivity(i);
         }
+        if (item.getItemId() == R.id.Login)
+        {
+            Toast.makeText(this, "Login Activity", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(this, Login.class);
+            startActivity(i);
+        }
         if(item.getItemId()==R.id.help)
             Toast.makeText(this, "Help Activity", Toast.LENGTH_SHORT).show();
         if(item.getItemId()==R.id.about)
