@@ -18,7 +18,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         userEmail = findViewById(R.id.edtEmail);
-        userPassword = findViewById(R.id.editText5);
+        userPassword = findViewById(R.id.edtPassWord);
     }
 
     public void logIn(View view) {
@@ -27,15 +27,22 @@ public class Login extends AppCompatActivity {
         String email = login.getString("email1", "");
         String pass = login.getString("password1", "");
 
-
-        if (email.equals(userEmail.getText().toString()) && pass.equals(userPassword.getText().toString()))
+        if (email.equals("") && pass.equals(""))
         {
-            Intent intention = new Intent (this,Home.class);
-            startActivity(intention);
+            Toast.makeText(this, "No Data Present Currently, Please SignUp Instead", Toast.LENGTH_LONG).show();
         }
-        else
-        {
-            Toast.makeText(this, "Wrong Username/Passowrd", Toast.LENGTH_LONG).show();
+        else {
+            if (email.equals(userEmail.getText().toString()) && pass.equals(userPassword.getText().toString())) {
+                Intent intention = new Intent(this, Home.class);
+                startActivity(intention);
+            } else {
+                Toast.makeText(this, "Wrong Username/Passowrd", Toast.LENGTH_LONG).show();
+            }
         }
+    }
+    public void RedirectSignUP(View view)
+    {
+        Intent i = new Intent(this,SignUp.class);
+        startActivity(i);
     }
 }
