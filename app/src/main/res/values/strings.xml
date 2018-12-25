@@ -30,5 +30,12 @@
     <string name="share">Share</string>
     <string name="don_t_have_an_account_signup_instead">Don\'t have an account Signup instead</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string-array name="Subject">
+        <item> Report a bug </item>
+        <item> abc </item>
+
+
+    </string-array>
+
 </resources>
 
