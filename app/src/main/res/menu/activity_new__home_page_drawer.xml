@@ -10,7 +10,7 @@
             android:title="@string/home" />
         <item
             android:id="@+id/nav_newad"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/addicon"
             android:title="@string/post_a_new_ad" />
     </group>
 
