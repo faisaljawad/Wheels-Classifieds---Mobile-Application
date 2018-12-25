@@ -9,9 +9,9 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class ContactUs_Activity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us_);
         Spinner spinner=findViewById(R.id.spinnercontactus);
@@ -19,7 +19,6 @@ public class ContactUs_Activity extends AppCompatActivity implements AdapterView
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemClickListener(this);
-
     }
 
     @Override
