@@ -74,10 +74,18 @@ public class New_HomePage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_share) {
+        if (id == R.id.nav_share)
+        {
 
-        } else if(id == R.id.nav_loginsignup) {
+        }
+        else if(id == R.id.nav_loginsignup)
+        {
             Intent i = new Intent(this, Login.class);
+            startActivity(i);
+        }
+        else if (id == R.id.nav_contact)
+        {
+            Intent i = new Intent(this, ContactUs_Activity.class);
             startActivity(i);
         }
 
