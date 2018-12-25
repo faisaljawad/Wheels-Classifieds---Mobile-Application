@@ -37,6 +37,7 @@
     <string name="enteremail_forget">Enter Email here</string>
     <string name="text_forgetpass">We will send you an Email with a verification code, enter your email here.</string>
     <string name="submit_forgetpass">Submit</string>
+    <string name="submitforget_pass">TODO</string>
     <string-array name="Subject">
         <item> Report a bug </item>
         <item> Fake Ad </item>
