@@ -34,6 +34,8 @@
     <string name="message_contactus">Message</string>
     <string name="email_contact">Email</string>
     <string name="submit_contact">Submit</string>
+    <string name="enter_email_here">Enter Email here</string>
+    <string name="we_will_send_you_a_verification_code_enter_your_email_here">We will send you a verification code. Enter your email here.</string>
     <string-array name="Subject">
         <item> Report a bug </item>
         <item> Fake Ad </item>
