@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -13,12 +14,23 @@ public class Login extends AppCompatActivity {
 
     EditText userEmail,userPassword;
 
+    public void change_to_forget_activitiy()
+    {
+        Intent intention = new Intent(this, forgetpassword.class);
+        startActivity(intention);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         userEmail = findViewById(R.id.edtEmail);
         userPassword = findViewById(R.id.edtPassWord);
+        Button forget_btn = (Button) findViewById(R.id.btnForgetPassword);
+        forget_btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                change_to_forget_activitiy();
+            }
+        });
     }
 
     public void logIn(View view) {
