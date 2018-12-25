@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/brandsWallpaper"
+    android:background="@drawable/brandswallpaper"
     android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
     <LinearLayout
@@ -111,7 +111,7 @@
             android:layout_marginBottom="6dp"
             android:background="@android:color/transparent"
             android:onClick="RedirectSignUP"
-            android:text="@string/don_t_have_an_account_sign_up_instead"
+            android:text="@string/don_t_have_an_account_signup_instead"
             android:textColor="@android:color/holo_blue_dark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

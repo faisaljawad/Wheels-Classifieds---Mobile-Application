@@ -19,4 +19,16 @@
     <string name="splashLogo">splashScreenLogo</string>
     <string name="signup">Signup</string>
     <string name="login">Login</string>
+    <string name="navigation_drawer_open"></string>
+    <string name="navigation_drawer_close"></string>
+    <string name="contact_us">Contact Us</string>
+    <string name="home">Home</string>
+    <string name="post_a_new_ad">Post a New Ad</string>
+    <string name="settings">Settings</string>
+    <string name="communicate">Communicate</string>
+    <string name="login_signup">Login / Signup</string>
+    <string name="share">Share</string>
+    <string name="don_t_have_an_account_signup_instead">Don\'t have an account Signup instead</string>
+    <string name="forgot_password">Forgot Password?</string>
 </resources>
+
