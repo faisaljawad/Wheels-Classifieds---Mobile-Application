@@ -18,15 +18,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUp"
+        <activity
+            android:name=".SignUp"
             android:theme="@style/AppTheme" />
         <activity android:name=".SplashScreen" />
-        <activity android:name=".Login"
+        <activity
+            android:name=".Login"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".New_HomePage"
             android:label="Wheels Classifieds" />
-        <activity android:name=".ContactUs_Activity"></activity>
+        <activity android:name=".ContactUs_Activity" />
+        <activity android:name=".forgetpassword"></activity>
     </application>
 
 </manifest>
