@@ -19,8 +19,6 @@ public class ContactUs_Activity extends AppCompatActivity  {
                 getResources().getStringArray(R.array.Subject));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-
-
     }
 
 
