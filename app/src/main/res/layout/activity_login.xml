@@ -84,7 +84,7 @@
             android:id="@+id/imgSignInBtn"
             android:layout_width="match_parent"
             android:layout_height="49dp"
-            android:contentDescription="@string/loginbutton"
+            android:contentDescription="Login Button"
             app:srcCompat="@drawable/loginbutton" />
 
         <Button
@@ -100,7 +100,7 @@
             android:layout_marginBottom="6dp"
             android:background="@android:color/transparent"
             android:onClick="RedirectSignUP"
-            android:text="@string/don_t_have_an_account"
+            android:text="Dont Have an Account?"
             android:textColor="@android:color/holo_blue_dark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
