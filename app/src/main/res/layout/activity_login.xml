@@ -33,14 +33,14 @@
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:background="@android:color/transparent"
+            android:layout_marginTop="8dp"
             android:contentDescription="@string/todo"
             app:layout_constraintBottom_toTopOf="@+id/LinearLogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/wheelstransparentlogo" />
 
         <EditText
             android:id="@+id/edtEmail"
@@ -81,7 +81,7 @@
             app:layout_constraintVertical_bias="0.425" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/imgSignInBtn"
             android:layout_width="match_parent"
             android:layout_height="49dp"
             android:contentDescription="@string/loginbutton"
