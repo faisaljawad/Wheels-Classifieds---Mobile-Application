@@ -11,7 +11,6 @@
     <string name="signup1">Signup</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="log_in">Log In</string>
     <string name="todo">TODO</string>
     <string name="sign_up_instead">Sign up Instead</string>
     <string name="dont_have_an_account">Dont have an Account ?</string>
@@ -40,6 +39,11 @@
     <string name="submit_forget_password">Submit Forget Password</string>
     <string name="search_vehicles">Search a Vehical</string>
     <string name="enter_your_email">Enter your Email</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="sign_in_with_google">Sign in With Google</string>
+    <string name="sign_in_with_facebook">Sign in With Facebook</string>
+    <string name="by_creating_or_logging_in_with_an_account_you_agree_with_our_terms_of_conditions">By Creating or Logging in With an Account you Agree with our Terms of Conditions</string>
+    <string name="log_in">Log In</string>
     <string-array name="Subject">
         <item> Report a bug </item>
         <item> Fake Ad </item>
