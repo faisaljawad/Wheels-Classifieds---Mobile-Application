@@ -25,6 +25,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         userEmail = findViewById(R.id.edtEmail);
         userPassword = findViewById(R.id.edtPassWord);
+
         Button forget_btn = (Button) findViewById(R.id.btnForgetPassword);
         forget_btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

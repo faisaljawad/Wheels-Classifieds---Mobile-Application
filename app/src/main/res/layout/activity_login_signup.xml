@@ -66,6 +66,7 @@
         android:layout_marginBottom="268dp"
         android:background="@drawable/loginbuttonbackground"
         android:text="@string/log_in"
+        android:onClick="Redirect_Login"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

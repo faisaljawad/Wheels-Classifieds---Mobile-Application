@@ -64,7 +64,7 @@ public class New_HomePage extends AppCompatActivity
         int id = item.getItemId();
         if(id == R.id.nav_loginsignup)
         {
-            Intent i = new Intent(this, Login.class);
+            Intent i = new Intent(this, login_signup.class);
             startActivity(i);
         }
         else if (id == R.id.nav_contact)
