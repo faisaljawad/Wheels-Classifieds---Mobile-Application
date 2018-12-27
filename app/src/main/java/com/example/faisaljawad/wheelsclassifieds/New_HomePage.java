@@ -62,12 +62,7 @@ public class New_HomePage extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.nav_share)
-        {
-
-        }
-        else if(id == R.id.nav_loginsignup)
+        if(id == R.id.nav_loginsignup)
         {
             Intent i = new Intent(this, Login.class);
             startActivity(i);
@@ -75,6 +70,11 @@ public class New_HomePage extends AppCompatActivity
         else if (id == R.id.nav_contact)
         {
             Intent i = new Intent(this, ContactUs_Activity.class);
+            startActivity(i);
+        }
+        else if(id == R.id.nav_header_title)
+        {
+            Intent i = new Intent(this, login_signup.class);
             startActivity(i);
         }
 
