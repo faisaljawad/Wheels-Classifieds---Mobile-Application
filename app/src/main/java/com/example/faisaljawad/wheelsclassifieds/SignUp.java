@@ -16,7 +16,8 @@ public class SignUp extends AppCompatActivity {
 
     EditText name,email,password,confirmPassword;
     FirebaseDatabase object = FirebaseDatabase.getInstance();
-
+    DatabaseReference root_ref = object.getReference();
+    DatabaseReference child_ref = root_ref.child("Hello");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
