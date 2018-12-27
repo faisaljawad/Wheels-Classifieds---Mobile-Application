@@ -45,7 +45,8 @@ public class New_HomePage extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        }
+        else {
             super.onBackPressed();
         }
     }
@@ -73,6 +74,11 @@ public class New_HomePage extends AppCompatActivity
             startActivity(i);
         }
         else if(id == R.id.nav_header_title)
+        {
+            Intent i = new Intent(this, login_signup.class);
+            startActivity(i);
+        }
+        else if(id == R.id.imageView)
         {
             Intent i = new Intent(this, login_signup.class);
             startActivity(i);
