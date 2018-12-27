@@ -44,6 +44,11 @@
     <string name="sign_in_with_facebook">Sign in With Facebook</string>
     <string name="by_creating_or_logging_in_with_an_account_you_agree_with_our_terms_of_conditions">By Creating or Logging in With an Account you Agree with our Terms of Conditions</string>
     <string name="log_in">Log In</string>
+    <string name="having_problem_signing_up">Having Problem Signing Up ?</string>
+    <string name="login_to_my_account"><![CDATA[Login To my Account >]]></string>
+    <string name="enter_e_mail">Enter E-mail</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="cannot_acces_your_account2">Cannot acces your account ?</string>
     <string-array name="Subject">
         <item> Report a bug </item>
         <item> Fake Ad </item>
