@@ -12,8 +12,10 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:context=".SignUp">
 
         <ImageView
@@ -33,78 +35,78 @@
 
         <EditText
             android:id="@+id/namecontactus"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="139dp"
-            android:layout_marginEnd="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginBottom="17dp"
+            android:layout_width="394dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="121dp"
+            android:layout_marginBottom="15dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/name_contactus"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/emailcontactus"
+            app:layout_constraintBottom_toTopOf="@+id/editText6"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.916"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:autofillHints="" />
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <EditText
             android:id="@+id/emailcontactus"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="15dp"
+            android:layout_width="382dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="18dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/email_contact"
             android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/spinnercontactus"
+            app:layout_constraintBottom_toTopOf="@+id/subjectemail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/namecontactus"
-            android:autofillHints="" />
-
-        <Spinner
-            android:id="@+id/spinnercontactus"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginEnd="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginBottom="17dp"
-            android:foreground="@android:color/white"
-            app:layout_constraintBottom_toTopOf="@+id/editText6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emailcontactus" />
+            app:layout_constraintTop_toBottomOf="@+id/namecontactus" />
 
         <EditText
             android:id="@+id/editText6"
-            android:layout_width="0dp"
-            android:layout_height="96dp"
-            android:layout_marginBottom="33dp"
+            android:layout_width="388dp"
+            android:layout_height="128dp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/message_contactus"
             android:inputType="textPersonName"
             app:layout_constraintBottom_toTopOf="@+id/buttoncontactus"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnercontactus"
-            android:autofillHints="" />
+            app:layout_constraintTop_toBottomOf="@+id/subjectemail" />
 
         <Button
             android:id="@+id/buttoncontactus"
             android:layout_width="393dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="48dp"
             android:text="@string/submit_contact"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.444"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText6" />
+
+        <EditText
+            android:id="@+id/subjectemail"
+            android:layout_width="382dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="18dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="Subject of Email"
+            android:inputType="textEmailSubject"
+            app:layout_constraintBottom_toTopOf="@+id/editText6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailcontactus" />
 
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

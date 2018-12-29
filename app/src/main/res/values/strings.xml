@@ -49,13 +49,8 @@
     <string name="enter_e_mail">Enter E-mail</string>
     <string name="enter_password">Enter Password</string>
     <string name="cannot_acces_your_account2">Cannot acces your account ?</string>
-    <string-array name="Subject">
-        <item> Report a bug </item>
-        <item> Fake Ad </item>
-        <item>Report Ad</item>
+    <string name="subject_of_email">Subject of Email</string>
 
-
-    </string-array>
 
 </resources>
 
