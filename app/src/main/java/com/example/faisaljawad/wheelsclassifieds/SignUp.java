@@ -1,8 +1,5 @@
 package com.example.faisaljawad.wheelsclassifieds;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,9 +12,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class SignUp extends AppCompatActivity {
 
     EditText name,email,password,confirmPassword;
-    FirebaseDatabase object = FirebaseDatabase.getInstance();
-    DatabaseReference root_ref = object.getReference();
-    DatabaseReference child_ref = root_ref.child("Hello");
+    DatabaseReference users = FirebaseDatabase.getInstance().getReference("Users");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +25,7 @@ public class SignUp extends AppCompatActivity {
 
     public void saveSignUpInfo(View view)
     {
+        Toast.makeText(this,"Hello",Toast.LENGTH_SHORT).show();
         if(name.getText().toString().matches("") && email.getText().toString().matches("") && password.getText().toString().matches("") && confirmPassword.getText().toString().matches(""))
         {
             name.setError("Name Field is Empty!");
@@ -59,25 +55,35 @@ public class SignUp extends AppCompatActivity {
         }
         else if(password.getText().toString().equals(confirmPassword.getText().toString()))
         {
-            SharedPreferences userSignUp = getSharedPreferences("Info", Context.MODE_PRIVATE);
-            SharedPreferences.Editor edit = userSignUp.edit();
+           // SharedPreferences userSignUp = getSharedPreferences("Info", Context.MODE_PRIVATE);
+           // SharedPreferences.Editor edit = userSignUp.edit();
 
-            edit.putString("username", name.getText().toString());
-            edit.putString("email1", email.getText().toString());
-            edit.putString("password1", password.getText().toString());
+           //edit.putString("username", name.getText().toString());
+           //edit.putString("email1", email.getText().toString());
+           //edit.putString("password1", password.getText().toString());
 
-            edit.apply();
+           //edit.apply();
 
             Toast.makeText(this, "Sign-Up Successful", Toast.LENGTH_LONG).show();
-            Intent i = new Intent(this, Login.class);
-            startActivity(i);
+            add_user();
+            // Intent i = new Intent(this, Login.class);
+            // startActivity(i);
         }
 
         else
         {
-            //Toast.makeText(this,"Password mismatched. Please Try again!",Toast.LENGTH_LONG).show();
             password.setError("Password mismatched");
             confirmPassword.setError("Confirm Password misamtched!");
         }
+    }
+
+    private void add_user()
+    {
+        String name_in = name.getText().toString();
+        String email_in = email.getText().toString();
+        String password_in = password.getText().toString();
+        String id = users.push().getKey();
+        user_info_class user_obj = new user_info_class(name_in,email_in,password_in);
+        users.child(id).setValue(user_obj);
     }
 }

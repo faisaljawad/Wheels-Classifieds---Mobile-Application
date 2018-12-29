@@ -16,6 +16,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="56dp"
+        android:onClick="Redirect_Signup"
         android:background="@drawable/border"
         android:text="@string/create_your_account"
         android:textColor="#ffffff"

@@ -17,4 +17,10 @@ public class login_signup extends AppCompatActivity {
         Intent i = new Intent(login_signup.this,Login.class);
         startActivity(i);
     }
+    public void Redirect_Signup(View view)
+    {
+        Intent i = new Intent(this,SignUp.class);
+        startActivity(i);
+    }
+
 }
