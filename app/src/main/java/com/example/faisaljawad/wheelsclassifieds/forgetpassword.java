@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -17,7 +18,7 @@ public class forgetpassword extends AppCompatActivity {
 
 
     private EditText pass_email;
-    Button submit_btn_forget;
+    ImageView submit_btn_forget;
     //FirebaseAuth firebaseAuth; //firebase Auth is an object here
 
     @Override
@@ -26,13 +27,13 @@ public class forgetpassword extends AppCompatActivity {
         setContentView(R.layout.activity_forgetpassword);
         pass_email=findViewById(R.id.emailforgetpassword);
         //firebaseAuth=FirebaseAuth.getInstance();
-        submit_btn_forget=findViewById(R.id.btnForgetPassword);
         submit_btn_forget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(forgetpassword.this,"Hello",Toast.LENGTH_LONG).show();
             }
         });
+
     }
 
 
