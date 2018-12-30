@@ -67,7 +67,7 @@ public class login_signup extends AppCompatActivity {
                             finish();
                         }
                         else {
-                            Toast.makeText(getApplicationContext(),"Sign IN Unsuccessful",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Sign in Unsuccessful",Toast.LENGTH_LONG).show();
                         }
                     }
                 });
