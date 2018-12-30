@@ -36,16 +36,8 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         userEmail = findViewById(R.id.edtEmail_signup);
         userPassword = findViewById(R.id.edtPassWord);
-        auth = FirebaseAuth.getInstance();
-        auth_listener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(auth.getCurrentUser() != null)
-                {
-                    startActivity(new Intent(Login.this, account_profile.class));
-                }
-            }
-        };
+
+
         Button login_btn = (Button) findViewById(R.id.btnLogIn);
         Button forget_btn = (Button) findViewById(R.id.btnForgetPassword);
         forget_btn.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +50,16 @@ public class Login extends AppCompatActivity {
                 start_signin();
             }
         });
+        auth = FirebaseAuth.getInstance();
+        auth_listener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if(auth.getCurrentUser() != null)
+                {
+                    startActivity(new Intent(Login.this, account_profile.class));
+                }
+            }
+        };
     }
     public void start_signin() {
         String email_login = userEmail.getText().toString().trim();

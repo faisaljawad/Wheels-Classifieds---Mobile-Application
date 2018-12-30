@@ -33,7 +33,6 @@ public class forgetpassword extends AppCompatActivity {
                  if(useremail.equals(""))//if user email is null display this msg
                  {
                      Toast.makeText(forgetpassword.this,"Please enter your registered Email ID.", Toast.LENGTH_SHORT).show();
-
                  }
                  else
                  {
@@ -50,7 +49,6 @@ public class forgetpassword extends AppCompatActivity {
                              {
                                  Toast.makeText(forgetpassword.this,"Error in sending mail.", Toast.LENGTH_SHORT).show();
                              }
-
                          }
                      });
                  }
