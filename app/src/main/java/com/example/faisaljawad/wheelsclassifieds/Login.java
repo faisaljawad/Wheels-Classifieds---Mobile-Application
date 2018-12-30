@@ -23,7 +23,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        userEmail = findViewById(R.id.edtEmail);
+        userEmail = findViewById(R.id.edtEmail_signup);
         userPassword = findViewById(R.id.edtPassWord);
 
         Button forget_btn = (Button) findViewById(R.id.btnForgetPassword);

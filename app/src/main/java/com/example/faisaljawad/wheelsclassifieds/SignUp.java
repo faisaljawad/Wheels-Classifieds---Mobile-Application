@@ -11,19 +11,19 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUp extends AppCompatActivity
 {
-
+    //Button btn_signup = (Button)findViewById(R.id.btnSignUp);
     EditText name,email,password,confirmPassword;
     DatabaseReference users = FirebaseDatabase.getInstance().getReference("Users");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        name = findViewById(R.id.edtName);
-        email = findViewById(R.id.edtEmail);
-        password = findViewById(R.id.edtPassWord);
-        confirmPassword = findViewById(R.id.edtPassword2);
-    }
+        name = (EditText)findViewById(R.id.edtName);
+        email = (EditText)findViewById(R.id.edtEmail_signup);
+        password = (EditText)findViewById(R.id.edtPassword_signup);
+        confirmPassword = (EditText)findViewById(R.id.edtPassword2_signup);
 
+    }
     public void saveSignUpInfo(View view)
     {
         Toast.makeText(this,"Hello",Toast.LENGTH_SHORT).show();
