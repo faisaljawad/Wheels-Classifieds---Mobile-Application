@@ -75,7 +75,7 @@
         app:layout_constraintVertical_bias="0.609" />
 
     <Button
-        android:id="@+id/btnSignUp"
+        android:id="@+id/btnSignUp2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -83,6 +83,7 @@
         android:text="@string/sign_up"
         android:textColor="#ffffff"
         android:background="@null"
+        android:onClick="RedirectSignUP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -103,6 +104,7 @@
         android:background="@null"
         android:text="@string/cannot_acces_your_account2"
         android:textColor="#ffffff"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"

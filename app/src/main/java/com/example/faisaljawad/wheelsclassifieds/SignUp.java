@@ -63,8 +63,8 @@ public class SignUp extends AppCompatActivity
         }
         else if(password.getText().toString().equals(confirmPassword.getText().toString()))
         {
-           // SharedPreferences userSignUp = getSharedPreferences("Info", Context.MODE_PRIVATE);
-           // SharedPreferences.Editor edit = userSignUp.edit();
+           //SharedPreferences userSignUp = getSharedPreferences("Info", Context.MODE_PRIVATE);
+           //SharedPreferences.Editor edit = userSignUp.edit();
            //edit.putString("username", name.getText().toString());
            //edit.putString("email1", email.getText().toString());
            //edit.putString("password1", password.getText().toString());
