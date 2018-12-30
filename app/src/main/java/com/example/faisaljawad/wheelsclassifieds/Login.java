@@ -56,8 +56,7 @@ public class Login extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(auth.getCurrentUser() != null)
                 {
-                    Toast.makeText(Login.this, "Sign-In Successful", Toast.LENGTH_SHORT).show();
-                    
+                    //Toast.makeText(Login.this, "Sign-In Successful", Toast.LENGTH_SHORT).show();
                     //startActivity(new Intent(Login.this, account_profile.class));
                 }
             }
@@ -75,8 +74,10 @@ public class Login extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(Login.this, "Sign-In Failed!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, "Sign-In Successful!", Toast.LENGTH_SHORT).show();
                     }
+                    else
+                        Toast.makeText(Login.this,"Sign-In Failed!",Toast.LENGTH_LONG).show();
                 }
             });
         }
