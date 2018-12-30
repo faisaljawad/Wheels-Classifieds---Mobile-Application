@@ -33,6 +33,7 @@ public class login_signup extends AppCompatActivity {
         mGoogleSignInClient = GoogleSignIn.getClient(this,gso);
         authenticator = FirebaseAuth.getInstance();
     }
+
     public void Redirect_Login(View view)
     {
         Intent i = new Intent(login_signup.this,Login.class);
@@ -40,7 +41,7 @@ public class login_signup extends AppCompatActivity {
     }
     public void Redirect_Signup(View view)
     {
-        Intent i = new Intent(this,SignUp.class);
+        Intent i = new Intent(login_signup.this,SignUp.class);
         startActivity(i);
     }
     public void SignInUsingGoogle(View view)

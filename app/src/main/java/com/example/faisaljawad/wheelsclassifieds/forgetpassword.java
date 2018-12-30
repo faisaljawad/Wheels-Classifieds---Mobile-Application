@@ -15,9 +15,10 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class forgetpassword extends AppCompatActivity {
 
+
     private EditText pass_email;
-    Button submit_btn;
-    FirebaseAuth firebaseAuth; //firebase Auth is an object here
+    Button submit_btn_forget;
+    //FirebaseAuth firebaseAuth; //firebase Auth is an object here
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +26,18 @@ public class forgetpassword extends AppCompatActivity {
         setContentView(R.layout.activity_forgetpassword);
         pass_email=findViewById(R.id.emailforgetpassword);
         //firebaseAuth=FirebaseAuth.getInstance();
-        submit_btn=(Button)findViewById(R.id.btnForgetPassword);
-        submit_btn.setOnClickListener(new View.OnClickListener() {
+        submit_btn_forget=findViewById(R.id.btnForgetPassword);
+        submit_btn_forget.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                Toast.makeText(forgetpassword.this, "Hello",Toast.LENGTH_LONG).show();
-                //start_forget_password();
+                Toast.makeText(forgetpassword.this,"Hello",Toast.LENGTH_LONG).show();
             }
         });
     }
-    public void start_forget_password()
+
+
+
+    /*public void start_forget_password()
     {
         String useremail=pass_email.getText().toString().trim(); //getting txt and converting into string and trim is used to remove whitespaces
         if(useremail.equals(""))//if user email is null display this msg
@@ -58,6 +62,6 @@ public class forgetpassword extends AppCompatActivity {
                 }
             });
         }
-    }
+    }*/
 
 }

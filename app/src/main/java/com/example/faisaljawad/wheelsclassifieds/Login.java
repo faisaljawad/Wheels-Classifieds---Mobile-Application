@@ -27,7 +27,7 @@ public class Login extends AppCompatActivity {
     FirebaseAuth.AuthStateListener auth_listener;
     public void change_to_forget_activitiy()
     {
-        Intent intention = new Intent(this, forgetpassword.class);
+        Intent intention = new Intent(Login.this, forgetpassword.class);
         startActivity(intention);
     }
     @Override
@@ -42,6 +42,7 @@ public class Login extends AppCompatActivity {
         Button forget_btn = (Button) findViewById(R.id.btnForgetPassword);
         forget_btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                //Toast.makeText(Login.this,"Hello",Toast.LENGTH_LONG).show();
                 change_to_forget_activitiy();
             }
         });
