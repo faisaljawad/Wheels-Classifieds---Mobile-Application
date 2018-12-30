@@ -32,7 +32,8 @@
             android:label="Wheels Classifieds" />
         <activity android:name=".ContactUs_Activity" />
         <activity android:name=".forgetpassword" />
-        <activity android:name=".login_signup"></activity>
+        <activity android:name=".login_signup"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

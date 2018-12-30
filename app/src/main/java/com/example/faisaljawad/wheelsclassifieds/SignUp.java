@@ -9,7 +9,8 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class SignUp extends AppCompatActivity {
+public class SignUp extends AppCompatActivity
+{
 
     EditText name,email,password,confirmPassword;
     DatabaseReference users = FirebaseDatabase.getInstance().getReference("Users");
