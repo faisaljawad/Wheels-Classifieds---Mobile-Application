@@ -22,6 +22,6 @@
         app:layout_constraintHorizontal_bias="0.344"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wheelwallpaper" />
+        android:src="@drawable/wheelstransparentlogo" />
 
 </android.support.constraint.ConstraintLayout>
