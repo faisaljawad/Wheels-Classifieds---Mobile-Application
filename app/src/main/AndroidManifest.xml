@@ -36,7 +36,8 @@
             android:name=".login_signup"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".account_profile" />
-        <activity android:name=".Ad_Category"></activity>
+        <activity android:name=".Ad_Category" />
+        <activity android:name=".Profile_activity"></activity>
     </application>
 
 </manifest>

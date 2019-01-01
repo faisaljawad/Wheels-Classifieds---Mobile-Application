@@ -50,6 +50,15 @@
     <string name="enter_password">Enter Password</string>
     <string name="cannot_acces_your_account2">Cannot acces your account ?</string>
     <string name="subject_of_email">Subject of Email</string>
+    <string name="junaid_ahmed">Junaid Ahmed</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="my_ads">My Ads</string>
+    <string name="MyAds">MyAds</string>
+    <string name="chats">Chats</string>
+    <string name="saved_ads">Saved Ads</string>
+    <string name="my_cart">My Cart</string>
+    <string name="favourites">Favourites</string>
+    <string name="profilenext">profileNext</string>
 
 
 </resources>
