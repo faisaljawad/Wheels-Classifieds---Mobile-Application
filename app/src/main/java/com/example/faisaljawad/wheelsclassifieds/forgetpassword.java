@@ -19,7 +19,7 @@ public class forgetpassword extends AppCompatActivity {
 
     private EditText pass_email;
     ImageView submit_btn_forget;
-    //FirebaseAuth firebaseAuth; //firebase Auth is an object here
+    FirebaseAuth firebaseAuth; //firebase Auth is an object here
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +27,12 @@ public class forgetpassword extends AppCompatActivity {
         setContentView(R.layout.activity_forgetpassword);
         pass_email=findViewById(R.id.emailforgetpassword);
         submit_btn_forget = (ImageView)findViewById(R.id.submitforget_pass);
-        //firebaseAuth=FirebaseAuth.getInstance();
+        firebaseAuth=FirebaseAuth.getInstance();
         submit_btn_forget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(forgetpassword.this,"Hello",Toast.LENGTH_LONG).show();
+
+                start_forget_password();
             }
         });
 
@@ -39,8 +40,9 @@ public class forgetpassword extends AppCompatActivity {
 
 
 
-    /*public void start_forget_password()
+    public void start_forget_password()
     {
+        //Toast.makeText(forgetpassword.this,"Hello in function",Toast.LENGTH_LONG).show();
         String useremail=pass_email.getText().toString().trim(); //getting txt and converting into string and trim is used to remove whitespaces
         if(useremail.equals(""))//if user email is null display this msg
         {
@@ -48,14 +50,16 @@ public class forgetpassword extends AppCompatActivity {
         }
         else
         {
+
             firebaseAuth.sendPasswordResetEmail(useremail).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
+                    Toast.makeText(forgetpassword.this,"Hello in on complete function",Toast.LENGTH_LONG).show();
                     if(task.isSuccessful())
                     {
                         Toast.makeText(forgetpassword.this,"Password reset email sent.", Toast.LENGTH_SHORT).show();
-                        //finish();
-                        //startActivity(new Intent(forgetpassword.this, Login.class));
+                        finish();
+                        startActivity(new Intent(forgetpassword.this, Login.class));
                     }
                     else
                     {
@@ -64,6 +68,6 @@ public class forgetpassword extends AppCompatActivity {
                 }
             });
         }
-    }*/
+    }
 
 }
