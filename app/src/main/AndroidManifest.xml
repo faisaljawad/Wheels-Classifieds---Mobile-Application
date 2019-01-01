@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".Home"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,11 +22,11 @@
         </activity>
         <activity
             android:name=".SignUp"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SplashScreen" />
         <activity
             android:name=".Login"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".New_HomePage"
             android:label="Wheels Classifieds" />
@@ -34,8 +34,9 @@
         <activity android:name=".forgetpassword" />
         <activity
             android:name=".login_signup"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".account_profile"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".account_profile" />
+        <activity android:name=".Ad_Category"></activity>
     </application>
 
 </manifest>

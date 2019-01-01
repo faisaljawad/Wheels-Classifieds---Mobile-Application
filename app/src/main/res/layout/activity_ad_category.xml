@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ad_Category"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/imgCarBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:layout_marginBottom="181dp"
+        android:background="@drawable/black_border"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPart"
+        app:layout_constraintEnd_toStartOf="@+id/txtBike"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/caricon" />
+
+    <ImageView
+        android:id="@+id/imgAccBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="108dp"
+        android:background="@drawable/black_border"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtAccessories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCar"
+        app:srcCompat="@drawable/partsicon" />
+
+    <ImageView
+        android:id="@+id/imgPartsBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/black_border"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtPart"
+        app:layout_constraintTop_toBottomOf="@+id/txtBike"
+        app:srcCompat="@drawable/accessoriesicon" />
+
+    <ImageView
+        android:id="@+id/imgBikeBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="180dp"
+        android:background="@drawable/black_border"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtAccessories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtCar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bikeicon" />
+
+    <TextView
+        android:id="@+id/txtCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginLeft="87dp"
+        android:layout_marginTop="213dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
+        android:layout_marginBottom="49dp"
+        android:text="Cars"
+        app:layout_constraintBottom_toTopOf="@+id/imgAccBtn"
+        app:layout_constraintEnd_toStartOf="@+id/imgBikeBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtBike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="213dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="47dp"
+        android:text="Bike"
+        app:layout_constraintBottom_toTopOf="@+id/imgPartsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgCarBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginLeft="87dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:layout_marginBottom="123dp"
+        android:text="Parts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgPartsBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCarBtn" />
+
+    <TextView
+        android:id="@+id/txtAccessories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="66dp"
+        android:layout_marginRight="66dp"
+        android:layout_marginBottom="123dp"
+        android:text="Accessories"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgAccBtn"
+        app:layout_constraintTop_toBottomOf="@+id/imgBikeBtn" />
+</android.support.constraint.ConstraintLayout>
