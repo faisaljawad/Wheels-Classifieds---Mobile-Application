@@ -27,7 +27,7 @@ public class Login extends AppCompatActivity {
     FirebaseAuth.AuthStateListener auth_listener;
     public void change_to_forget_activitiy()
     {
-        Intent intention = new Intent(this, forgetpassword.class);
+        Intent intention = new Intent(Login.this, forgetpassword.class);
         startActivity(intention);
     }
     @Override
@@ -36,20 +36,13 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         userEmail = findViewById(R.id.edtEmail_signup);
         userPassword = findViewById(R.id.edtPassWord);
-        auth = FirebaseAuth.getInstance();
-        auth_listener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(auth.getCurrentUser() != null)
-                {
-                    startActivity(new Intent(Login.this, account_profile.class));
-                }
-            }
-        };
+
+
         Button login_btn = (Button) findViewById(R.id.btnLogIn);
         Button forget_btn = (Button) findViewById(R.id.btnForgetPassword);
         forget_btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                //Toast.makeText(Login.this,"Hello",Toast.LENGTH_LONG).show();
                 change_to_forget_activitiy();
             }
         });
@@ -58,6 +51,17 @@ public class Login extends AppCompatActivity {
                 start_signin();
             }
         });
+        auth = FirebaseAuth.getInstance();
+        auth_listener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if(auth.getCurrentUser() != null)
+                {
+                    //Toast.makeText(Login.this, "Sign-In Successful", Toast.LENGTH_SHORT).show();
+                    //startActivity(new Intent(Login.this, account_profile.class));
+                }
+            }
+        };
     }
     public void start_signin() {
         String email_login = userEmail.getText().toString().trim();
@@ -71,8 +75,10 @@ public class Login extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(Login.this, "Sign-In Failed!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, "Sign-In Successful!", Toast.LENGTH_SHORT).show();
                     }
+                    else
+                        Toast.makeText(Login.this,"Sign-In Failed!",Toast.LENGTH_LONG).show();
                 }
             });
         }
