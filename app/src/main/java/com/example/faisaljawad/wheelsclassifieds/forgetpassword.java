@@ -42,7 +42,7 @@ public class forgetpassword extends AppCompatActivity {
 
     public void start_forget_password()
     {
-        //Toast.makeText(forgetpassword.this,"Hello in function",Toast.LENGTH_LONG).show();
+        ///Toast.makeText(forgetpassword.this,"Hello in function",Toast.LENGTH_LONG).show();
         String useremail=pass_email.getText().toString().trim(); //getting txt and converting into string and trim is used to remove whitespaces
         if(useremail.equals(""))//if user email is null display this msg
         {
