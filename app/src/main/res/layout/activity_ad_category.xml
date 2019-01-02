@@ -96,12 +96,11 @@
         app:layout_constraintVertical_bias="0.261"
         app:srcCompat="@drawable/bikeicon" />
 
-
     <TextView
         android:id="@+id/txtCar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cars"
+        android:text="Cars"
         app:layout_constraintBottom_toBottomOf="@+id/imgCarBtn"
         app:layout_constraintEnd_toEndOf="@+id/imgCarBtn"
         app:layout_constraintHorizontal_bias="0.487"
@@ -113,7 +112,7 @@
         android:id="@+id/txtBike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bike"
+        android:text="Bikes"
         app:layout_constraintBottom_toBottomOf="@+id/imgBikeBtn"
         app:layout_constraintEnd_toEndOf="@+id/imgBikeBtn"
         app:layout_constraintHorizontal_bias="0.537"
@@ -125,7 +124,7 @@
         android:id="@+id/txtPart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/parts"
+        android:text="Parts"
         app:layout_constraintBottom_toBottomOf="@+id/imgAccBtn"
         app:layout_constraintEnd_toEndOf="@+id/imgAccBtn"
         app:layout_constraintHorizontal_bias="0.508"
@@ -137,7 +136,7 @@
         android:id="@+id/txtAccessories"
         android:layout_width="wrap_content"
         android:layout_height="16dp"
-        android:text="@string/accessories"
+        android:text="Accessories"
         app:layout_constraintBottom_toBottomOf="@+id/imgPartsBtn"
         app:layout_constraintEnd_toEndOf="@+id/imgPartsBtn"
         app:layout_constraintHorizontal_bias="0.471"

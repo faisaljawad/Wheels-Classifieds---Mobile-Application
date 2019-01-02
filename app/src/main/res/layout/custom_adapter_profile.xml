@@ -21,7 +21,7 @@
         android:layout_marginEnd="298dp"
         android:layout_marginRight="298dp"
         android:layout_marginBottom="479dp"
-        android:contentDescription="@string/list_option_pic"
+        android:contentDescription="List Option Pic"
         app:srcCompat="@android:drawable/sym_def_app_icon" />
 
     <TextView
@@ -40,6 +40,6 @@
         android:layout_marginEnd="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginBottom="500dp"
-        android:text="@string/textview"
+        android:text="Text View"
         android:textSize="10pt" />
 </RelativeLayout>

@@ -17,7 +17,7 @@
         android:layout_marginEnd="13dp"
         android:layout_marginRight="13dp"
         android:ems="10"
-        android:hint="@string/for_example_alloy_rims_painted_etc"
+        android:hint="For example Alloy Rims painted etc"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -31,7 +31,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginTop="484dp"
-        android:text="@string/description"
+        android:text="Description"
         app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,7 +45,7 @@
         android:layout_marginEnd="13dp"
         android:layout_marginRight="13dp"
         android:ems="10"
-        android:hint="@string/enter_assembly"
+        android:hint="Enter Assembly"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="416dp"
-        android:text="@string/assembly"
+        android:text="Assembly"
         app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -71,7 +71,7 @@
         android:layout_marginEnd="13dp"
         android:layout_marginRight="13dp"
         android:ems="10"
-        android:hint="@string/enter_body_color"
+        android:hint="Enter Body Color"
         android:inputType="textImeMultiLine|textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -83,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="336dp"
-        android:text="@string/body_color"
+        android:text="Body Color"
         app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -97,7 +97,7 @@
         android:layout_marginEnd="13dp"
         android:layout_marginRight="13dp"
         android:ems="10"
-        android:hint="@string/enter_mileage"
+        android:hint="Enter Mileage"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -109,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="256dp"
-        android:text="@string/mileage"
+        android:text="Mileage"
         app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -123,7 +123,7 @@
         android:layout_marginEnd="13dp"
         android:layout_marginRight="13dp"
         android:ems="10"
-        android:hint="@string/enter_city_of_registration"
+        android:hint="Enter City of Registration"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -135,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
-        android:text="@string/registration_city"
+        android:text="Registration City"
         app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -149,7 +149,7 @@
         android:layout_marginEnd="13dp"
         android:layout_marginRight="13dp"
         android:ems="10"
-        android:hint="@string/enter_price"
+        android:hint="Enter Price"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -161,7 +161,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
-        android:text="@string/price"
+        android:text="Price"
         app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -170,7 +170,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/location"
+        android:text="Location"
         app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -184,7 +184,7 @@
         android:layout_marginEnd="13dp"
         android:layout_marginRight="13dp"
         android:ems="10"
-        android:hint="@string/enter_location"
+        android:hint="Enter Location"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
