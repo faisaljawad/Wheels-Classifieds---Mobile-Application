@@ -34,9 +34,13 @@ public class SplashScreen extends AppCompatActivity {
             startActivity(i);
         }
         if(item.getItemId()==R.id.help)
+        {
             Toast.makeText(this, "Help Activity", Toast.LENGTH_SHORT).show();
+        }
         if(item.getItemId()==R.id.about)
+        {
             Toast.makeText(this, "About Activity", Toast.LENGTH_SHORT).show();
+        }
         return super.onOptionsItemSelected(item);
     }
 }

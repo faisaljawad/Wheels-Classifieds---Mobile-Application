@@ -48,12 +48,18 @@
     <string name="login_to_my_account"><![CDATA[Login To my Account >]]></string>
     <string name="enter_e_mail">Enter E-mail</string>
     <string name="enter_password">Enter Password</string>
-    <string name="cannot_acces_your_account2">Cannot access your account ?</string>
+    <string name="cannot_acces_your_account2">Cannot acces your account ?</string>
     <string name="subject_of_email">Subject of Email</string>
-    <string name="profile_pic">profile pic</string>
     <string name="junaid_ahmed">Junaid Ahmed</string>
-    <string name="profile_next">profile next</string>
-    <string name="list_option_pic">list_option_pic</string>
-    <string name="textview">TextView</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="my_ads">My Ads</string>
+    <string name="MyAds">MyAds</string>
+    <string name="chats">Chats</string>
+    <string name="saved_ads">Saved Ads</string>
+    <string name="my_cart">My Cart</string>
+    <string name="favourites">Favourites</string>
+    <string name="profilenext">profileNext</string>
+
+
 </resources>
 
