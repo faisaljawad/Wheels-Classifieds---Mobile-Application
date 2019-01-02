@@ -139,6 +139,11 @@ public class New_HomePage extends AppCompatActivity
             Intent i = new Intent(this, login_signup.class);
             startActivity(i);
         }
+        else if (id == R.id.nav_profile)
+        {
+            Intent i = new Intent(this,profile_activity.class);
+            startActivity(i);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
