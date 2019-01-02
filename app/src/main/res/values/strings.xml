@@ -59,6 +59,26 @@
     <string name="my_cart">My Cart</string>
     <string name="favourites">Favourites</string>
     <string name="profilenext">profileNext</string>
+    <string name="cars">Cars</string>
+    <string name="bike">Bike</string>
+    <string name="parts">Parts</string>
+    <string name="accessories">Accessories</string>
+    <string name="header">Header</string>
+    <string name="details">Details</string>
+    <string name="enter_location">Enter Location</string>
+    <string name="enter_price">Enter Price</string>
+    <string name="enter_city_of_registration">Enter City of Registration</string>
+    <string name="enter_mileage">Enter Mileage</string>
+    <string name="enter_body_color">Enter Body Color</string>
+    <string name="enter_assembly">Enter Assembly</string>
+    <string name="for_example_alloy_rims_painted_etc">For Example : Alloy RIms, Painted etc</string>
+    <string name="description">Description</string>
+    <string name="assembly">Assembly</string>
+    <string name="body_color">Body Color</string>
+    <string name="mileage">Mileage</string>
+    <string name="registration_city">Registration City</string>
+    <string name="price">Price</string>
+    <string name="location">Location</string>
 
 
 </resources>

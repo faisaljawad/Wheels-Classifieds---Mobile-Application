@@ -19,7 +19,7 @@ public class Profile_activity extends AppCompatActivity {
 
         ArrayAdapter myArrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,options);
 
-        ListView myListView = findViewById(R.id.lst_profile);
+        /*ListView myListView = findViewById(R.id.lst_profile);
 
         myListView.setAdapter(myArrayAdapter);
 
@@ -31,6 +31,6 @@ public class Profile_activity extends AppCompatActivity {
                         Toast.makeText(Profile_activity.this,option,Toast.LENGTH_LONG).show();
                     }
                 }
-        );
+        );*/
     }
 }
