@@ -2,8 +2,11 @@ package com.example.faisaljawad.wheelsclassifieds;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.view.MenuInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -38,7 +41,55 @@ public class New_HomePage extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        BottomNavigationView bottomnav=findViewById(R.id.bottom_navigation);
+        bottomnav.setOnNavigationItemSelectedListener(navListener);
     }
+    /*private BottomNavigationView.OnNavigationItemSelectedListener navListener=new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            Fragment selectedFragment = null;
+
+            switch (item.getItemId()) {
+                case R.id.nav_cars:
+                    selectedFragment = new fragment_car();
+                    break;
+                case R.id.nav_bikes:
+                    selectedFragment = new fragment_bikes();
+                    break;
+                case R.id.nav_acc:
+                    selectedFragment = new accessories_fragment();
+                    break;
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        selectedFragment).commit();
+            }
+            return false;
+        }
+    }*/
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    Fragment selectedFragment = null;
+
+                    switch (item.getItemId()) {
+                        case R.id.nav_cars:
+                            selectedFragment = new fragment_car();
+                            break;
+                        case R.id.nav_bikes:
+                            selectedFragment = new fragment_bikes();
+                            break;
+                        case R.id.nav_acc:
+                            selectedFragment = new accessories_fragment();
+                            break;
+                    }
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            selectedFragment).commit();
+
+                    return true;
+                }
+            };
+
 
     @Override
     public void onBackPressed() {

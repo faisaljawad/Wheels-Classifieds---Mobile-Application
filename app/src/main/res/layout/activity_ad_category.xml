@@ -96,6 +96,7 @@
         app:layout_constraintVertical_bias="0.261"
         app:srcCompat="@drawable/bikeicon" />
 
+
     <TextView
         android:id="@+id/txtCar"
         android:layout_width="wrap_content"

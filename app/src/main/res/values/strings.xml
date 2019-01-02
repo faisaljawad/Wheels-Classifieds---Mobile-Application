@@ -59,6 +59,12 @@
     <string name="my_cart">My Cart</string>
     <string name="favourites">Favourites</string>
     <string name="profilenext">profileNext</string>
+    <string name="cars_fragment">Cars Fragment</string>
+    <string name="bikes_fragment">bikes fragment</string>
+
+
+    <string name="accessories_fragment">Accessories fragment</string>
+
 
 
 </resources>
