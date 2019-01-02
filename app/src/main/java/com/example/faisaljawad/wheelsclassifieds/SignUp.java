@@ -17,7 +17,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUp extends AppCompatActivity
 {
-    //Button btn_signup = (Button)findViewById(R.id.btnSignUp);
     EditText name,email,password,confirmPassword;
     DatabaseReference users = FirebaseDatabase.getInstance().getReference("Users");
     FirebaseAuth auth;
