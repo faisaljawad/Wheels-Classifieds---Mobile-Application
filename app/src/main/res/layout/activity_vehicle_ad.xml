@@ -8,7 +8,7 @@
     tools:context=".Vehicle_Ad">
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/edtDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
@@ -32,11 +32,11 @@
         android:layout_marginLeft="4dp"
         android:layout_marginTop="484dp"
         android:text="@string/description"
-        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/edtAssembly"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
@@ -58,11 +58,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="416dp"
         android:text="@string/assembly"
-        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/edtBodyColor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
@@ -84,11 +84,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="336dp"
         android:text="@string/body_color"
-        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/edtMileage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
@@ -110,11 +110,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="256dp"
         android:text="@string/mileage"
-        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/edtRegistration"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
@@ -136,11 +136,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
         android:text="@string/registration_city"
-        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edtPrice"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
@@ -162,7 +162,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
         android:text="@string/price"
-        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -171,11 +171,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/location"
-        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/edtLocation"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edtLocation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
