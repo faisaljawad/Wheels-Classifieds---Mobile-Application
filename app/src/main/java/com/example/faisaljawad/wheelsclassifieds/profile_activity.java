@@ -1,6 +1,5 @@
 package com.example.faisaljawad.wheelsclassifieds;
 
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -51,10 +50,10 @@ public class profile_activity extends AppCompatActivity {
             convertView = getLayoutInflater().inflate(R.layout.custom_listview,null);
 
             ImageView image = convertView.findViewById(R.id.img_lst_opt_pic);
-            TextView opt_text = findViewById(R.id.txt_lst_opt);
+            TextView opt_text = (TextView) findViewById(R.id.txt_lst_opt);
 
             image.setImageResource(images[position]);
-            opt_text.setText(options[position]);
+           // opt_text.setText(options[position]);
 
             return convertView;
         }

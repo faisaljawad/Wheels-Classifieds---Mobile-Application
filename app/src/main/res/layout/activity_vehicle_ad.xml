@@ -30,10 +30,11 @@
                 android:id="@+id/imgAdImages"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:contentDescription="todo"
+                android:onClick="takePicture"
                 app:srcCompat="@drawable/ic_menu_camera"
                 tools:layout_editor_absoluteX="74dp"
-                tools:layout_editor_absoluteY="0dp"
-                android:contentDescription="todo" />
+                tools:layout_editor_absoluteY="0dp" />
 
             <TextView
                 android:id="@+id/txtHeaderLocation"

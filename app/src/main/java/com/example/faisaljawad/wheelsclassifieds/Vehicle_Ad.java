@@ -1,7 +1,9 @@
 package com.example.faisaljawad.wheelsclassifieds;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,11 +21,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import android.provider.MediaStore;
 
 public class Vehicle_Ad extends AppCompatActivity {
 
     EditText location,price,registration,mileage,body_color,assembly,description;
     DatabaseReference Car_Ads = FirebaseDatabase.getInstance().getReference("Car_Ads");
+    public static final int camera_request = 9999;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -70,4 +74,18 @@ public class Vehicle_Ad extends AppCompatActivity {
         Car_Ads.child(id).setValue(user_obj);
     }
 
+    public void takePicture(View view){
+        Intent intention = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(intention,camera_request);
+    }
+
+    /*@Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == camera_request)
+        {
+            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+        }
+    }*/
 }
