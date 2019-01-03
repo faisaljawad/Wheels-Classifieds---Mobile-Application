@@ -65,5 +65,18 @@
     <string name="option_name">Option Name</string>
     <string name="lst_option_pic">lst_option_pic</string>
     <string name="profile">Profile</string>
+    <string name="for_example_rim_type_usage_etc">For Example : Rim type, Usage etc</string>
+    <string name="enter_car_assembly">Enter Car Assembly</string>
+    <string name="assembly">Assembly :</string>
+    <string name="enter_body_color">Enter Body Color</string>
+    <string name="body_color">Body Color :</string>
+    <string name="enter_mileage">Enter Mileage</string>
+    <string name="mileage">Mileage :</string>
+    <string name="registration_city">Registration City :</string>
+    <string name="enter_price">Enter Price</string>
+    <string name="price">Price :</string>
+    <string name="description">Description</string>
+    <string name="location">Location :</string>
+    <string name="enter_city">Enter City</string>
 </resources>
 
