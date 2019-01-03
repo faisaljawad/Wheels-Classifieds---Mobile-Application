@@ -7,186 +7,165 @@
     android:layout_height="match_parent"
     tools:context=".Vehicle_Ad">
 
-    <EditText
-        android:id="@+id/edtDescription"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginTop="488dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:ems="10"
-        android:hint="For example Alloy Rims painted etc"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtHeaderLocation" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="36dp">
 
-    <TextView
-        android:id="@+id/txtHeaderDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="484dp"
-        android:text="Description"
-        app:layout_constraintStart_toStartOf="@+id/edtLocation"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/edtAssembly"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginTop="416dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:ems="10"
-        android:hint="Enter Assembly"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtHeaderLocation" />
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/ic_menu_camera"
+                tools:layout_editor_absoluteX="74dp"
+                tools:layout_editor_absoluteY="0dp" />
 
-    <TextView
-        android:id="@+id/txtHeaderAssembly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="416dp"
-        android:text="Assembly"
-        app:layout_constraintStart_toStartOf="@+id/edtLocation"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtHeaderLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Location :"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="102dp" />
 
-    <EditText
-        android:id="@+id/edtBodyColor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginTop="340dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:ems="10"
-        android:hint="Enter Body Color"
-        android:inputType="textImeMultiLine|textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtHeaderLocation" />
+            <EditText
+                android:id="@+id/edtLocation"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="Enter City"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="120dp" />
 
-    <TextView
-        android:id="@+id/txtHeaderColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="336dp"
-        android:text="Body Color"
-        app:layout_constraintStart_toStartOf="@+id/edtLocation"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtHeaderPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Price :"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="102dp" />
 
-    <EditText
-        android:id="@+id/edtMileage"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginTop="264dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:ems="10"
-        android:hint="Enter Mileage"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtHeaderLocation" />
+            <EditText
+                android:id="@+id/edtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="Enter Price"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="120dp" />
 
-    <TextView
-        android:id="@+id/txtHeaderMileage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="256dp"
-        android:text="Mileage"
-        app:layout_constraintStart_toStartOf="@+id/edtLocation"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtHeaderRegCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Registration City :"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="102dp" />
 
-    <EditText
-        android:id="@+id/edtRegistration"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:ems="10"
-        android:hint="Enter City of Registration"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtHeaderLocation" />
+            <EditText
+                android:id="@+id/edtRegistration"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="Enter City"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="120dp" />
 
-    <TextView
-        android:id="@+id/txtHeaderRegCity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:text="Registration City"
-        app:layout_constraintStart_toStartOf="@+id/edtLocation"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtHeaderMileage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Mileage :"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="102dp" />
 
-    <EditText
-        android:id="@+id/edtPrice"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:ems="10"
-        android:hint="Enter Price"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtHeaderLocation" />
+            <EditText
+                android:id="@+id/edtMileage"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="Enter Mileage"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="120dp" />
 
-    <TextView
-        android:id="@+id/txtHeaderPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:text="Price"
-        app:layout_constraintStart_toStartOf="@+id/edtLocation"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtHeaderColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Body Color :"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="102dp" />
 
-    <TextView
-        android:id="@+id/txtHeaderLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Location"
-        app:layout_constraintStart_toStartOf="@+id/edtLocation"
-        app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/edtBodyColor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="Enter Body Color"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="120dp" />
 
-    <EditText
-        android:id="@+id/edtLocation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:ems="10"
-        android:hint="Enter Location"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtHeaderLocation" />
+            <TextView
+                android:id="@+id/txtHeaderAssembly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Assembly :"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="102dp" />
+
+            <EditText
+                android:id="@+id/edtAssembly"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="Enter Car Assembly"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="120dp" />
+
+            <TextView
+                android:id="@+id/txtHeaderDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Description"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="102dp" />
+
+            <EditText
+                android:id="@+id/edtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="For Example : Rim type, Usage etc"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="120dp" />
+        </LinearLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

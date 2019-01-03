@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -44,6 +45,12 @@ public class Vehicle_Ad extends AppCompatActivity {
             Toast.makeText(this, "Not all valid inputs are Entered. Please Try Again!",Toast.LENGTH_LONG).show();
         }
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_forward,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
     private boolean Validate() // This Function will have all validation check
     {
         return true;
