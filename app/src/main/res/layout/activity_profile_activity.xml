@@ -7,22 +7,21 @@
     tools:context=".profile_activity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="375dp"
+        android:layout_height="435dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="108dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ListView
+            android:id="@+id/lst_profile"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/lst_profile">
-        </ListView>
+            android:layout_height="match_parent"></ListView>
 
     </LinearLayout>
 

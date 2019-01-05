@@ -37,6 +37,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Ad_Category" />
         <activity android:name=".Vehicle_Ad" />
+        <activity android:name=".profile_activity"/>
     </application>
 
 </manifest>
