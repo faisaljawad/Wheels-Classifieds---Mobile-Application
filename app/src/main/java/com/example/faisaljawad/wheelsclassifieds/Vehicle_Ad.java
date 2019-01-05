@@ -70,8 +70,8 @@ public class Vehicle_Ad extends AppCompatActivity {
         String assembly_in = assembly.getText().toString().trim();
         String description_in = description.getText().toString().trim();
         String id = Car_Ads.push().getKey();
-        Ads_info_class user_obj = new Ads_info_class(location_in,price_in,registration_in,mileage_in,body_color_in,assembly_in,description_in);
-        Car_Ads.child(id).setValue(user_obj);
+        Ads_info_class car_obj = new Ads_info_class(location_in,price_in,registration_in,mileage_in,body_color_in,assembly_in,description_in);
+        Car_Ads.child(id).setValue(car_obj);
     }
 
     public void takePicture(View view){

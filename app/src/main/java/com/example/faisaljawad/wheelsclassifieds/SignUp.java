@@ -70,7 +70,6 @@ public class SignUp extends AppCompatActivity
            //edit.apply();
             add_user();
         }
-
         else
         {
             password.setError("Password mismatched");
