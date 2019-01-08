@@ -52,21 +52,9 @@
     <string name="enter_password">Enter Password</string>
     <string name="cannot_acces_your_account2">Cannot acces your account ?</string>
     <string name="subject_of_email">Subject of Email</string>
-    <string name="junaid_ahmed">Junaid Ahmed</string>
-    <string name="profile_picture">Profile Picture</string>
-    <string name="my_ads">My Ads</string>
-    <string name="MyAds">MyAds</string>
-    <string name="chats">Chats</string>
-    <string name="saved_ads">Saved Ads</string>
-    <string name="my_cart">My Cart</string>
-    <string name="favourites">Favourites</string>
-    <string name="profilenext">profileNext</string>
     <string name="cars_fragment">Cars Fragment</string>
     <string name="bikes_fragment">bikes fragment</string>
     <string name="accessories_fragment">Accessories fragment</string>
-    <string name="option_name">Option Name</string>
-    <string name="lst_option_pic">lst_option_pic</string>
-    <string name="profile">Profile</string>
     <string name="for_example_rim_type_usage_etc">For Example : Rim type, Usage etc</string>
     <string name="enter_car_assembly">Enter Car Assembly</string>
     <string name="assembly">Assembly :</string>
@@ -80,5 +68,13 @@
     <string name="description">Description</string>
     <string name="location">Location :</string>
     <string name="enter_city">Enter City</string>
+    <string name="profile_name">Profile Name</string>
+    <string name="prof_pic">prof_pic</string>
+    <string name="prof_next">prof_next</string>
+    <string name="profile">Profile</string>
+    <string name="muhammad_mustaqeem">Muhammad Mustaqeem</string>
+    <string name="my_ads">My Ads</string>
+    <string name="myads_pic">myads_pic</string>
+    <string name="mychats_pic">mychats_pic</string>
 </resources>
 
