@@ -69,12 +69,10 @@
     <string name="location">Location :</string>
     <string name="enter_city">Enter City</string>
     <string name="profile_name">Profile Name</string>
-    <string name="prof_pic">prof_pic</string>
-    <string name="prof_next">prof_next</string>
     <string name="profile">Profile</string>
-    <string name="muhammad_mustaqeem">Muhammad Mustaqeem</string>
-    <string name="my_ads">My Ads</string>
-    <string name="myads_pic">myads_pic</string>
-    <string name="mychats_pic">mychats_pic</string>
+    <string name="textview">textview</string>
+    <string name="img_cst_adp_1">img_cst_adp_1</string>
+    <string name="textview2">textview2</string>
+    <string name="img_cst_adp2">img_cst_adp2</string>
 </resources>
 
