@@ -26,7 +26,7 @@ public class forgetpassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgetpassword);
         pass_email=findViewById(R.id.emailforgetpassword);
-        submit_btn_forget = (ImageView)findViewById(R.id.submitforget_pass);
+        //submit_btn_forget = (ImageView)findViewById(R.id.submitforget_pass);
         firebaseAuth=FirebaseAuth.getInstance();
         submit_btn_forget.setOnClickListener(new View.OnClickListener() {
             @Override
