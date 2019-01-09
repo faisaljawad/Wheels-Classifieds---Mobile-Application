@@ -54,7 +54,8 @@
                     android:id="@+id/edtLocation"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
-                    android:layout_weight=".85"
+                    android:minWidth="350dp"
+                    android:layout_weight=".80"
                     android:background="@null"
                     android:ems="10"
                     android:hint="@string/enter_city"
@@ -62,13 +63,13 @@
                     tools:layout_editor_absoluteX="16dp"
                     tools:layout_editor_absoluteY="120dp" />
 
-                <ImageView
-                    android:id="@+id/imgLocationNext"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".10"
-                    tools:src="@drawable/img_profile_next"
-                    android:contentDescription="TODO" />
+                <ImageButton
+                    android:id="@+id/btnLocation"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:minWidth="30dp"
+                    tools:src="@android:drawable/ic_menu_mylocation" />
 
             </LinearLayout>
 

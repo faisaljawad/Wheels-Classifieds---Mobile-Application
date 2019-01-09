@@ -18,9 +18,6 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/black_border"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="35dp"
         android:onClick="OpenDetails"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,15 +38,12 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/black_border"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.645"
+        app:layout_constraintVertical_bias="0.64"
         app:srcCompat="@drawable/partsicon" />
 
     <ImageView
@@ -63,9 +57,6 @@
         android:layout_marginRight="32dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/black_border"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.897"
@@ -85,9 +76,6 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/black_border"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.816"
@@ -95,54 +83,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.261"
         app:srcCompat="@drawable/bikeicon" />
-
-
-    <TextView
-        android:id="@+id/txtCar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cars"
-        app:layout_constraintBottom_toBottomOf="@+id/imgCarBtn"
-        app:layout_constraintEnd_toEndOf="@+id/imgCarBtn"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="@+id/imgCarBtn"
-        app:layout_constraintTop_toTopOf="@+id/imgCarBtn"
-        app:layout_constraintVertical_bias="0.88" />
-
-    <TextView
-        android:id="@+id/txtBike"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bikes"
-        app:layout_constraintBottom_toBottomOf="@+id/imgBikeBtn"
-        app:layout_constraintEnd_toEndOf="@+id/imgBikeBtn"
-        app:layout_constraintHorizontal_bias="0.537"
-        app:layout_constraintStart_toStartOf="@+id/imgBikeBtn"
-        app:layout_constraintTop_toTopOf="@+id/imgBikeBtn"
-        app:layout_constraintVertical_bias="0.874" />
-
-    <TextView
-        android:id="@+id/txtPart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Parts"
-        app:layout_constraintBottom_toBottomOf="@+id/imgAccBtn"
-        app:layout_constraintEnd_toEndOf="@+id/imgAccBtn"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="@+id/imgAccBtn"
-        app:layout_constraintTop_toTopOf="@+id/imgAccBtn"
-        app:layout_constraintVertical_bias="0.91" />
-
-    <TextView
-        android:id="@+id/txtAccessories"
-        android:layout_width="wrap_content"
-        android:layout_height="16dp"
-        android:text="Accessories"
-        app:layout_constraintBottom_toBottomOf="@+id/imgPartsBtn"
-        app:layout_constraintEnd_toEndOf="@+id/imgPartsBtn"
-        app:layout_constraintHorizontal_bias="0.471"
-        app:layout_constraintStart_toStartOf="@+id/imgPartsBtn"
-        app:layout_constraintTop_toTopOf="@+id/imgPartsBtn"
-        app:layout_constraintVertical_bias="0.916" />
 
 </android.support.constraint.ConstraintLayout>
