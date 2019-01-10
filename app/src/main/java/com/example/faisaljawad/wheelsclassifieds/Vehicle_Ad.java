@@ -2,6 +2,7 @@ package com.example.faisaljawad.wheelsclassifieds;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +11,9 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,7 +29,8 @@ import android.provider.MediaStore;
 public class Vehicle_Ad extends AppCompatActivity {
 
     EditText location,price,registration,mileage,body_color,assembly,description;
-    DatabaseReference Car_Ads = FirebaseDatabase.getInstance().getReference("Car_Ads");
+    DatabaseReference Vehicle_Ads = FirebaseDatabase.getInstance().getReference("Vehicle_Ads");
+    ImageView next;
     public static final int camera_request = 9999;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -40,14 +44,14 @@ public class Vehicle_Ad extends AppCompatActivity {
         body_color = (EditText)findViewById(R.id.edtBodyColor);
         assembly = (EditText)findViewById(R.id.edtAssembly);
         description = (EditText)findViewById(R.id.edtDescription);
-        if(Validate())
-        {
-            add_new_ad();
-        }
-        else
-        {
-            Toast.makeText(this, "Not all valid inputs are Entered. Please Try Again!",Toast.LENGTH_LONG).show();
-        }
+        next = (ImageView)findViewById(R.id.btnForward);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Vehicle_Ad.this, "Hello",Toast.LENGTH_LONG).show();
+                add_new_ad(v);
+            }
+        });
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -60,18 +64,26 @@ public class Vehicle_Ad extends AppCompatActivity {
         return true;
     }
 
-    private void add_new_ad()
+    public void add_new_ad(View view)
     {
-        String location_in = location.getText().toString().trim();
-        String price_in = price.getText().toString().trim();
-        String registration_in = registration.getText().toString().trim();
-        String mileage_in = mileage.getText().toString().trim();
-        String body_color_in = body_color.getText().toString().trim();
-        String assembly_in = assembly.getText().toString().trim();
-        String description_in = description.getText().toString().trim();
-        String id = Car_Ads.push().getKey();
-        Ads_info_class car_obj = new Ads_info_class(location_in,price_in,registration_in,mileage_in,body_color_in,assembly_in,description_in);
-        Car_Ads.child(id).setValue(car_obj);
+        if(Validate())
+        {
+            Toast.makeText(this, "Button Pressed",Toast.LENGTH_LONG).show();
+            /*String location_in = location.getText().toString().trim();
+            String price_in = price.getText().toString().trim();
+            String registration_in = registration.getText().toString().trim();
+            String mileage_in = mileage.getText().toString().trim();
+            String body_color_in = body_color.getText().toString().trim();
+            String assembly_in = assembly.getText().toString().trim();
+            String description_in = description.getText().toString().trim();
+            String id = Vehicle_Ads.push().getKey();
+            Ads_info_class car_obj = new Ads_info_class(location_in,price_in,registration_in,mileage_in,body_color_in,assembly_in,description_in);
+            Vehicle_Ads.child(id).setValue(car_obj);*/
+        }
+        else
+        {
+            Toast.makeText(this, "Not all valid inputs are Entered. Please Try Again!",Toast.LENGTH_LONG).show();
+        }
     }
 
     public void takePicture(View view){
