@@ -133,7 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/model_no"
+                android:text="Model no"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
@@ -143,7 +143,7 @@
                 android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="@string/enter_model_no"
+                android:hint="Enter Model Number"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="120dp" />
@@ -173,7 +173,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/engine_power"
+                android:text="Engine Power"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
@@ -182,7 +182,7 @@
                 android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="@string/enter_engine_power_in_cc"
+                android:hint="Enter Engine Power in CC"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="120dp" />
@@ -192,7 +192,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/transmission"
+                android:text="Transmission"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
@@ -210,7 +210,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/fuel_type"
+                android:text="Fuel Type"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
