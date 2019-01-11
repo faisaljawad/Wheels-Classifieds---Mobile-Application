@@ -70,9 +70,9 @@ public class Vehicle_Ad extends AppCompatActivity {
         {
             Toast.makeText(this, "Posting...",Toast.LENGTH_LONG).show();
             String location_in = location.getText().toString().trim();
-            String price_in = price.getText().toString().trim();
+            String price_in = "PKR " + price.getText().toString().trim();
             String registration_in = registration.getText().toString().trim();
-            String mileage_in = mileage.getText().toString().trim();
+            String mileage_in = mileage.getText().toString().trim() + "kms";
             String body_color_in = body_color.getText().toString().trim();
             String assembly_in = assembly.getText().toString().trim();
             String description_in = description.getText().toString().trim();
