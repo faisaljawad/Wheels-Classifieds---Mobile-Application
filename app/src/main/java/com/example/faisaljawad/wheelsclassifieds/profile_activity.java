@@ -11,13 +11,13 @@ import android.widget.TextView;
 
 public class profile_activity extends AppCompatActivity {
 
-    int [] images1 = {R.drawable.img_profile_myads,R.drawable.img_profile_chats,R.drawable.img_profile_fav};
+    int [] images1 = {R.drawable.img_profile_myads,R.drawable.img_profile_chats,R.drawable.img_profile_fav,R.drawable.img_profile_alerts};
 
-    int [] images2 = {R.drawable.img_profile_alerts,R.drawable.img_profile_cart,R.drawable.img_profile_settings,R.drawable.img_profile_logout};
+    int [] images2 = {R.drawable.img_profile_cart,R.drawable.img_profile_settings,R.drawable.img_profile_logout,R.drawable.img_prof_cancel};
 
-    String [] options1 = {"My Ads","Chats","Saved Ads"};
+    String [] options1 = {"My Ads","Chats","Saved Ads","Alerts"};
 
-    String [] options2 = {"Alerts","My Cart","Settings","Log Out"};
+    String [] options2 = {"My Cart","Settings","Log Out,Delete Account"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
