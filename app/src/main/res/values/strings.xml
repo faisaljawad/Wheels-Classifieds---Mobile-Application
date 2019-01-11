@@ -117,5 +117,6 @@
         <item>Local</item>
         <item>Imported</item>
     </string-array>
+    <string name="abc"></string>
 </resources>
 
