@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -20,8 +21,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import android.provider.MediaStore;
@@ -30,7 +29,6 @@ public class Vehicle_Ad extends AppCompatActivity {
 
     EditText location,price,registration,mileage,body_color,assembly,description;
     DatabaseReference Vehicle_Ads = FirebaseDatabase.getInstance().getReference("Vehicle_Ads");
-    ImageView next;
     public static final int camera_request = 9999;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,14 +42,6 @@ public class Vehicle_Ad extends AppCompatActivity {
         body_color = (EditText)findViewById(R.id.edtBodyColor);
         assembly = (EditText)findViewById(R.id.edtAssembly);
         description = (EditText)findViewById(R.id.edtDescription);
-        next = (ImageView)findViewById(R.id.btnForward);
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(Vehicle_Ad.this, "Hello",Toast.LENGTH_LONG).show();
-                add_new_ad(v);
-            }
-        });
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -59,17 +49,27 @@ public class Vehicle_Ad extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    private boolean Validate() // This Function will have all validation check
+    public boolean Validate() // This Function will have all validation check
     {
         return true;
     }
 
-    public void add_new_ad(View view)
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.btnForward:
+                add_new_ad();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void add_new_ad()
     {
         if(Validate())
         {
-            Toast.makeText(this, "Button Pressed",Toast.LENGTH_LONG).show();
-            /*String location_in = location.getText().toString().trim();
+            Toast.makeText(this, "Posting...",Toast.LENGTH_LONG).show();
+            String location_in = location.getText().toString().trim();
             String price_in = price.getText().toString().trim();
             String registration_in = registration.getText().toString().trim();
             String mileage_in = mileage.getText().toString().trim();
@@ -78,7 +78,7 @@ public class Vehicle_Ad extends AppCompatActivity {
             String description_in = description.getText().toString().trim();
             String id = Vehicle_Ads.push().getKey();
             Ads_info_class car_obj = new Ads_info_class(location_in,price_in,registration_in,mileage_in,body_color_in,assembly_in,description_in);
-            Vehicle_Ads.child(id).setValue(car_obj);*/
+            Vehicle_Ads.child(id).setValue(car_obj);
         }
         else
         {
