@@ -7,12 +7,46 @@
     tools:context=".profile_activity">
 
     <RelativeLayout
+        android:layout_width="363dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/loginbackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_prof_pic"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/img_profpic"
+            android:src="@drawable/img_profile_pic" />
+
+        <TextView
+            android:layout_width="264dp"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/img_prof_pic"
+            android:layout_marginLeft="99dp"
+            android:autoSizePresetSizes="@array/autosize_text_sizes"
+            android:gravity="center"
+            android:text="@string/muhammad_mustaqeem"
+            app:autoSizeMaxTextSize="150sp"
+            app:autoSizeMinTextSize="20sp"
+            app:autoSizeStepGranularity="20sp"
+            app:autoSizeTextType="uniform"
+            android:layout_alignStart="@+id/img_prof_pic"
+            android:layout_marginStart="99dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="0dp"
-        android:layout_height="500dp"
-        android:layout_marginTop="172dp"
+        android:layout_height="382dp"
+        android:layout_marginTop="152dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -30,15 +64,17 @@
         <ListView
             android:id="@+id/lst_prof_2"
             android:layout_width="match_parent"
-            android:layout_height="203dp"
+            android:layout_height="225dp"
             android:layout_below="@id/lst_prof_1"
-            android:layout_marginStart="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="9dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="18dp"
             android:layout_marginRight="8dp"
             android:background="@drawable/loginbackground" />
     </RelativeLayout>
+
 
 
 </android.support.constraint.ConstraintLayout>
