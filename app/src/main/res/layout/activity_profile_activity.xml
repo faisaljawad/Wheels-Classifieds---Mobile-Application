@@ -20,23 +20,23 @@
             android:id="@+id/img_prof_pic"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:contentDescription="@string/img_profpic"
+            android:contentDescription="@string/img_prof_pic"
             android:src="@drawable/img_profile_pic" />
 
         <TextView
+            android:id="@+id/txt_prof_name"
             android:layout_width="264dp"
             android:layout_height="match_parent"
+            android:layout_alignStart="@+id/img_prof_pic"
             android:layout_alignLeft="@+id/img_prof_pic"
+            android:layout_marginStart="99dp"
             android:layout_marginLeft="99dp"
-            android:autoSizePresetSizes="@array/autosize_text_sizes"
             android:gravity="center"
             android:text="@string/muhammad_mustaqeem"
             app:autoSizeMaxTextSize="150sp"
             app:autoSizeMinTextSize="20sp"
             app:autoSizeStepGranularity="20sp"
-            app:autoSizeTextType="uniform"
-            android:layout_alignStart="@+id/img_prof_pic"
-            android:layout_marginStart="99dp" />
+            app:autoSizeTextType="uniform" />
 
     </RelativeLayout>
 

@@ -98,7 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/condition"
+                android:text="Condition"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
@@ -106,7 +106,7 @@
                 android:id="@+id/spnCondition"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:entries="@array/ConditionEnteries"
+                android:entries="Condition Entries"
                 android:spinnerMode="dialog"/>
 
             <TextView
@@ -114,7 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/brand_name"
+                android:text="Brand Name"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
@@ -124,7 +124,7 @@
                 android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="@string/enter_brand_name"
+                android:hint="Enter Brand Name"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="120dp" />
@@ -144,7 +144,7 @@
                 android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="@string/enter_part_model"
+                android:hint="Enter Part Model"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="120dp" />
@@ -154,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/model_year"
+                android:text="Model Year"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
@@ -164,7 +164,7 @@
                 android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="@string/enter_model_year"
+                android:hint="Enter Model Year"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="120dp" />
@@ -175,7 +175,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/vehicle_model"
+                android:text="Vehicle Model"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
@@ -185,7 +185,7 @@
                 android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="@string/enter_vehicle_model"
+                android:hint="Enter Vehicle Model"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="120dp" />
@@ -195,7 +195,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:text="@string/dimensions"
+            android:text="Dimensions"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="102dp" />
 
@@ -205,7 +205,7 @@
                 android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="@string/enter_part_dimensions"
+                android:hint="Enter Part Dimensions"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="120dp" />
@@ -215,7 +215,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/import_type"
+                android:text="Import Type"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
@@ -223,7 +223,7 @@
                 android:id="@+id/spnImport"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:entries="@array/ImportEnteries"
+                android:entries="Import Entries"
                 android:spinnerMode="dialog"/>
 
 
@@ -232,7 +232,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/material"
+                android:text="Material"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
@@ -242,7 +242,7 @@
                 android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="@string/enter_material_type"
+                android:hint="Enter Material Type"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="120dp" />
@@ -262,7 +262,7 @@
                 android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="@string/for_example_rust_proof_branded_etc"
+                android:hint="For example rust proof branded etc"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="120dp" />

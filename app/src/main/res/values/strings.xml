@@ -74,8 +74,51 @@
     <string name="img_cst_adp_1">img_cst_adp_1</string>
     <string name="textview2">textview2</string>
     <string name="img_cst_adp2">img_cst_adp2</string>
-    <string name="forward">forward</string>
+    <string name="fuel_type">Fuel Type :</string>
+    <string name="transmission">Transmission :</string>
+    <string name="enter_engine_power_in_cc">Enter Engine Power (in cc)</string>
+    <string name="engine_power">Engine Power :</string>
+    <string name="enter_model_no">Enter Model No.</string>
+    <string name="model_no">Model no.</string>
+    <string name="for_example_rust_proof_branded_etc">For Example : Rust Proof, Branded etc</string>
+    <string name="enter_material_type">Enter Material Type</string>
+    <string name="material">Material :</string>
+    <string name="enter_part_dimensions">Enter Part Dimensions</string>
+    <string name="dimensions">Dimensions</string>
+    <string name="enter_vehicle_model">Enter Vehicle Model</string>
+    <string name="vehicle_model">Vehicle Model</string>
+    <string name="enter_model_year">Enter Model Year</string>
+    <string name="model_year">Model Year :</string>
+    <string name="enter_brand_name">Enter Brand Name</string>
+    <string name="brand_name">Brand Name :</string>
+    <string name="condition">Condition :</string>
+    <string name="import_type">Import Type :</string>
+    <string name="enter_part_model">Enter Part Model</string>
+    <string name="forward"></string>
+    <string-array name="fuelEnteries">
+        <item></item>
+        <item>Petrol</item>
+        <item>CNG</item>
+        <item>Diesel</item>
+        <item>Hybrid</item>
+    </string-array>
+    <string-array name="TransEnteries">
+        <item></item>
+        <item>Automatic</item>
+        <item>Manual</item>
+    </string-array>
+    <string-array name="ConditionEnteries">
+        <item></item>
+        <item>New</item>
+        <item>Used</item>
+    </string-array>
+    <string-array name="ImportEnteries">
+        <item></item>
+        <item>Local</item>
+        <item>Imported</item>
+    </string-array>
+    <string name="abc"></string>
     <string name="muhammad_mustaqeem">Muhammad Mustaqeem</string>
-    <string name="img_profpic"></string>
+    <string name="img_prof_pic">img_prof_pic</string>
 </resources>
 
