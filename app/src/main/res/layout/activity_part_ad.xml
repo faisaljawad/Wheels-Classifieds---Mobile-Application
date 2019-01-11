@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_gravity="center"
     android:layout_height="match_parent"
-    tools:context=".Vehicle_Ad">
+    android:layout_gravity="center"
+    tools:context=".Part_ad">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,7 +31,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:contentDescription="todo"
-                android:onClick="takePicture"
                 app:srcCompat="@drawable/ic_menu_camera"
                 tools:layout_editor_absoluteX="74dp"
                 tools:layout_editor_absoluteY="0dp" />
@@ -51,15 +50,15 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/edtLocation"
+                    android:id="@+id/edtPLocation"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
-                    android:minWidth="350dp"
                     android:layout_weight=".80"
                     android:background="@null"
                     android:ems="10"
                     android:hint="@string/enter_city"
                     android:inputType="textPersonName"
+                    android:minWidth="350dp"
                     tools:layout_editor_absoluteX="16dp"
                     tools:layout_editor_absoluteY="120dp" />
 
@@ -69,7 +68,8 @@
                     android:layout_height="40dp"
                     android:background="@null"
                     android:minWidth="30dp"
-                    tools:src="@android:drawable/ic_menu_mylocation" />
+                    tools:src="@android:drawable/ic_menu_mylocation"
+                    android:contentDescription="TODO" />
 
             </LinearLayout>
 
@@ -83,7 +83,7 @@
                 tools:layout_editor_absoluteY="102dp" />
 
             <EditText
-                android:id="@+id/edtPrice"
+                android:id="@+id/edtPartPrice"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@null"
@@ -94,177 +94,161 @@
                 tools:layout_editor_absoluteY="120dp" />
 
             <TextView
-                android:id="@+id/txtHeaderRegCity"
+                android:id="@+id/txtCondition"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/registration_city"
+                android:text="@string/condition"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
-        <LinearLayout
+            <Spinner
+                android:id="@+id/spnCondition"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:entries="@array/ConditionEnteries"
+                android:spinnerMode="dialog"/>
+
+            <TextView
+                android:id="@+id/txtBrandNameHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/brand_name"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="102dp" />
+
+            <EditText
+                android:id="@+id/edtBrandName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/enter_brand_name"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="120dp" />
+
+            <TextView
+                android:id="@+id/txtModelNoHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Model No."
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="102dp" />
+
+            <EditText
+                android:id="@+id/edtPModelNo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/enter_part_model"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="120dp" />
+
+            <TextView
+                android:id="@+id/txtModelyearHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/model_year"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="102dp" />
+
+            <EditText
+                android:id="@+id/edtModelYear"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/enter_model_year"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="120dp" />
+
+
+            <TextView
+                android:id="@+id/txtVehicleModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/vehicle_model"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="102dp" />
+
+            <EditText
+                android:id="@+id/edtVehicleModel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/enter_vehicle_model"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="120dp" />
+
+            <TextView
+            android:id="@+id/txtDimensions"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/dimensions"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="102dp" />
 
             <EditText
-                android:id="@+id/edtRegistration"
-                android:layout_width="0dp"
-                android:layout_weight=".85"
-                android:layout_height="40dp"
-                android:background="@null"
-                android:ems="10"
-                android:hint="@string/enter_city"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="120dp" />
-
-            <ImageView
-                android:id="@+id/imgRegistrationNext"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".10"
-                android:contentDescription="@string/todo"
-                tools:src="@drawable/img_profile_next" />
-        </LinearLayout>
-
-            <TextView
-                android:id="@+id/txtModelHeader"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="@string/model_no"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="102dp" />
-
-            <EditText
-                android:id="@+id/edtModel"
+                android:id="@+id/edtDimensions"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="@string/enter_model_no"
+                android:hint="@string/enter_part_dimensions"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="120dp" />
 
             <TextView
-                android:id="@+id/txtMileageHeader"
+                android:id="@+id/txtImportType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/mileage"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="102dp" />
-
-            <EditText
-                android:id="@+id/edtMileage"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@null"
-                android:ems="10"
-                android:hint="@string/enter_mileage"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="120dp" />
-
-            <TextView
-                android:id="@+id/txtPowerHeader"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="@string/engine_power"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="102dp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@null"
-                android:ems="10"
-                android:hint="@string/enter_engine_power_in_cc"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="120dp" />
-
-            <TextView
-                android:id="@+id/txtTransimissionHeader"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="@string/transmission"
+                android:text="@string/import_type"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
             <Spinner
-                android:id="@+id/spnTransmission"
+                android:id="@+id/spnImport"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:entries="@array/TransEnteries"
-                android:spinnerMode="dialog"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="661dp" />
+                android:entries="@array/ImportEnteries"
+                android:spinnerMode="dialog"/>
+
 
             <TextView
-                android:id="@+id/txtFuelHeader"
+                android:id="@+id/txtMaterial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="@string/fuel_type"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="102dp" />
-
-            <Spinner
-                android:id="@+id/spnFuelType"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:entries="@array/fuelEnteries"
-                android:spinnerMode="dialog"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="661dp" />
-
-            <TextView
-                android:id="@+id/txtHeaderColor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="@string/body_color"
+                android:text="@string/material"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="102dp" />
 
             <EditText
-                android:id="@+id/edtBodyColor"
+                android:id="@+id/edtMaterial"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="@string/enter_body_color"
+                android:hint="@string/enter_material_type"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="120dp" />
 
             <TextView
-                android:id="@+id/txtHeaderAssembly"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="@string/assembly"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="102dp" />
-
-            <EditText
-                android:id="@+id/edtAssembly"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@null"
-                android:ems="10"
-                android:hint="@string/enter_car_assembly"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="120dp" />
-
-            <TextView
-                android:id="@+id/txtHeaderDescription"
+                android:id="@+id/txtDescriptionHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
@@ -278,13 +262,12 @@
                 android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="@string/for_example_rim_type_usage_etc"
+                android:hint="@string/for_example_rust_proof_branded_etc"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="120dp" />
         </LinearLayout>
     </ScrollView>
-
 
 
 </android.support.constraint.ConstraintLayout>

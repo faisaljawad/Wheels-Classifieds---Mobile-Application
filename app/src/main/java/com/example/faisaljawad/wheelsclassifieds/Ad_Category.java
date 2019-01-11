@@ -13,9 +13,14 @@ public class Ad_Category extends AppCompatActivity {
         setContentView(R.layout.activity_ad_category);
     }
 
-    public void OpenDetails(View view)
+    public void OpenVehicleDetails(View view)
     {
         Intent i = new Intent(Ad_Category.this,Vehicle_Ad.class);
+        startActivity(i);
+    }
+    public void OpenPartDetails(View view)
+    {
+        Intent i = new Intent(Ad_Category.this,Part_ad.class);
         startActivity(i);
     }
 }
