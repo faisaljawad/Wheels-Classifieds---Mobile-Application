@@ -46,7 +46,6 @@ public class SignUp extends AppCompatActivity
             return;
         }
         else if (email.getText().toString().matches("")) {
-            //Toast.makeText(this, "Email Field is left empty. Please Enter a valid Name", Toast.LENGTH_SHORT).show();
             email.setError("Email Field is Empty");
             return;
         }

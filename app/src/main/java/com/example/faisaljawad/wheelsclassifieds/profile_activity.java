@@ -11,27 +11,33 @@ import android.widget.TextView;
 
 public class profile_activity extends AppCompatActivity {
 
-    int [] images = {R.drawable.img_profile_myads,R.drawable.img_profile_chats,R.drawable.img_profile_fav,R.drawable.img_profile_cart};
+    int [] images1 = {R.drawable.img_profile_myads,R.drawable.img_profile_chats,R.drawable.img_profile_fav,R.drawable.img_profile_alerts};
 
-    String [] options = {"My Ads","Chats","Favourites","My Cart"};
+    int [] images2 = {R.drawable.img_profile_cart,R.drawable.img_profile_settings,R.drawable.img_profile_logout,R.drawable.img_prof_cancel};
+
+    String [] options1 = {"My Ads","Chats","Saved Ads","Alerts"};
+
+    String [] options2 = {"My Cart","Settings","Log Out,Delete Account"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_activity);
 
-        ListView listView = findViewById(R.id.lst_profile);
+        ListView listView1 = findViewById(R.id.lst_prof_1);
+        ListView listView2 = findViewById(R.id.lst_prof_2);
 
-        CustomAdapter customAdapter = new CustomAdapter();
+        CustomAdapter customAdapter1 = new CustomAdapter();
+        CustomAdapter2 customAdapter2 = new CustomAdapter2();
 
-        listView.setAdapter(customAdapter);
+        listView1.setAdapter(customAdapter1);
+        listView2.setAdapter(customAdapter2);
     }
 
-    class CustomAdapter extends BaseAdapter{
-
+    class CustomAdapter extends BaseAdapter {
         @Override
         public int getCount() {
-            return images.length;
+            return images1.length;
         }
 
         @Override
@@ -46,14 +52,43 @@ public class profile_activity extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+            convertView = getLayoutInflater().inflate(R.layout.custom_adapter_prof_1,null);
 
-            convertView = getLayoutInflater().inflate(R.layout.custom_listview,null);
+            ImageView imageView1 = convertView.findViewById(R.id.img_cst_adp_prof1);
+            TextView textView1 = convertView.findViewById(R.id.txt_cst_adp_1);
 
-            ImageView image = convertView.findViewById(R.id.img_lst_opt_pic);
-            TextView opt_text = (TextView) findViewById(R.id.txt_lst_opt);
+            imageView1.setImageResource(images1[position]);
+            textView1.setText(options1[position]);
 
-            image.setImageResource(images[position]);
-           // opt_text.setText(options[position]);
+            return convertView;
+        }
+    }
+
+    class CustomAdapter2 extends BaseAdapter {
+        @Override
+        public int getCount() {
+            return images2.length;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            convertView = getLayoutInflater().inflate(R.layout.custom_adapter_prof2,null);
+
+            ImageView imageView1 = convertView.findViewById(R.id.img_cst_adp_prof2);
+            TextView textView1 = convertView.findViewById(R.id.txt_cst_adp_2);
+
+            imageView1.setImageResource(images2[position]);
+            textView1.setText(options2[position]);
 
             return convertView;
         }
