@@ -112,7 +112,7 @@
         <item>New</item>
         <item>Used</item>
     </string-array>
-    <string-array name="ImportEnteries">
+    <string-array name="ImportedEnteries">
         <item></item>
         <item>Local</item>
         <item>Imported</item>

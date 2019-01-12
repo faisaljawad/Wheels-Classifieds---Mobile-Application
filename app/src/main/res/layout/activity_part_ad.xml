@@ -106,7 +106,7 @@
                 android:id="@+id/spnCondition"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:entries="Condition Entries"
+                android:entries="@array/ConditionEnteries"
                 android:spinnerMode="dialog"/>
 
             <TextView
@@ -223,7 +223,7 @@
                 android:id="@+id/spnImport"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:entries="Import Entries"
+                android:entries="@array/ImportedEnteries"
                 android:spinnerMode="dialog"/>
 
 
