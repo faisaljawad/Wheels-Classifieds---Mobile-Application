@@ -9,8 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
-
 public class fragment_bikes extends Fragment {
     @Nullable
     @Override
@@ -18,7 +16,6 @@ public class fragment_bikes extends Fragment {
         return inflater.inflate(R.layout.fragment_fragment_bikes, container, false);
 
     }
-
 }
 
 

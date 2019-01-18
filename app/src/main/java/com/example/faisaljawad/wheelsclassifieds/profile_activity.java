@@ -1,9 +1,11 @@
 package com.example.faisaljawad.wheelsclassifieds;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -17,7 +19,7 @@ public class profile_activity extends AppCompatActivity {
 
     String [] options1 = {"My Ads","Chats","Saved Ads","Alerts"};
 
-    String [] options2 = {"My Cart","Settings","Log Out,Delete Account"};
+    String [] options2 = {"My Cart","Settings","Log Out","Delete Account"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,50 @@ public class profile_activity extends AppCompatActivity {
 
         listView1.setAdapter(customAdapter1);
         listView2.setAdapter(customAdapter2);
+
+        listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position == 0){
+                    Intent myAds = new Intent(view.getContext(),myAds.class);
+                    startActivity(myAds);
+                }
+                if(position == 1){
+                    Intent myChats = new Intent(view.getContext(),myChats.class);
+                    startActivity(myChats);
+                }
+                if(position == 2){
+                    Intent savedAds = new Intent(view.getContext(),savedAds.class);
+                    startActivity(savedAds);
+                }
+                if(position == 3){
+                    Intent alerts = new Intent(view.getContext(),prof_alerts.class);
+                    startActivity(alerts);
+                }
+            }
+        });
+
+        listView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position == 0){
+                    Intent myCart = new Intent(view.getContext(),my_cart.class);
+                    startActivity(myCart);
+                }
+                if(position == 1){
+                    Intent settings = new Intent(view.getContext(),settings.class);
+                    startActivity(settings);
+                }
+                if(position == 2){
+                    Intent signOut = new Intent(view.getContext(),SplashScreen.class);
+                    startActivity(signOut);
+                }
+                if(position == 3){
+                    Intent delAcc = new Intent(view.getContext(),prof_del_account.class);
+                    startActivity(delAcc);
+                }
+            }
+        });
     }
 
     class CustomAdapter extends BaseAdapter {
