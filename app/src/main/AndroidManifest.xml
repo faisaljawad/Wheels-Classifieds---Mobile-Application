@@ -28,7 +28,7 @@
             android:name=".Login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".New_HomePage"
+            android:name=".app.New_HomePage"
             android:label="Wheels Classifieds" />
         <activity android:name=".ContactUs_Activity" />
         <activity android:name=".forgetpassword" />
