@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ import android.provider.MediaStore;
 
 public class Vehicle_Ad extends AppCompatActivity {
     EditText location,price,registration,mileage,body_color,assembly,description,modelno;
+    Spinner transmission, fuel;
     DatabaseReference Vehicle_Ads = FirebaseDatabase.getInstance().getReference("Vehicle_Ads");
     public static final int camera_request = 9999;
     @Override
@@ -34,6 +36,8 @@ public class Vehicle_Ad extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_ad);
+        transmission =(Spinner)findViewById(R.id.spnTransmission);
+        Toast.makeText(this, transmission.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
         location = (EditText)findViewById(R.id.edtLocation);
         price = (EditText)findViewById(R.id.edtPrice);
         registration = (EditText)findViewById(R.id.edtRegistration);
@@ -75,7 +79,7 @@ public class Vehicle_Ad extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.btnForward:
-                add_new_ad();
+                //add_new_ad();
                 break;
         }
         return super.onOptionsItemSelected(item);
