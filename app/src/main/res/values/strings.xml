@@ -125,5 +125,6 @@
     <string name="saved_ads">Saved Ads</string>
     <string name="delete_account">Delete Account</string>
     <string name="my_alerts">My Alerts</string>
+    <string name="submit">Submit</string>
 </resources>
 
