@@ -20,7 +20,7 @@
             android:id="@+id/img_prof_pic"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:contentDescription="@string/img_prof_pic"
+            android:contentDescription="profile pictue"
             android:src="@drawable/img_profile_pic" />
 
         <TextView
@@ -32,7 +32,7 @@
             android:layout_marginStart="99dp"
             android:layout_marginLeft="99dp"
             android:gravity="center"
-            android:text="@string/muhammad_mustaqeem"
+            android:text="Muhammad Mustaqeem"
             app:autoSizeMaxTextSize="150sp"
             app:autoSizeMinTextSize="20sp"
             app:autoSizeStepGranularity="20sp"

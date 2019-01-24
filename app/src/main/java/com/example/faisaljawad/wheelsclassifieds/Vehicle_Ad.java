@@ -27,7 +27,7 @@ import android.provider.MediaStore;
 
 public class Vehicle_Ad extends AppCompatActivity {
 
-    EditText location,price,registration,mileage,body_color,assembly,description;
+    EditText location,price,registration,mileage,body_color,assembly,description,modelno;
     DatabaseReference Vehicle_Ads = FirebaseDatabase.getInstance().getReference("Vehicle_Ads");
     public static final int camera_request = 9999;
     @Override
@@ -42,6 +42,7 @@ public class Vehicle_Ad extends AppCompatActivity {
         body_color = (EditText)findViewById(R.id.edtBodyColor);
         assembly = (EditText)findViewById(R.id.edtAssembly);
         description = (EditText)findViewById(R.id.edtDescription);
+        modelno=(EditText)findViewById(R.id.edtPModelNo);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -51,6 +52,23 @@ public class Vehicle_Ad extends AppCompatActivity {
 
     public boolean Validate() // This Function will have all validation check
     {
+        if(location.getText().toString().matches("") && price.getText().toString().matches("") && registration.getText().toString().matches("") && mileage.getText().toString().matches("") && body_color.getText().toString().matches("")&& assembly.getText().toString().matches("") && description.getText().toString().matches(""))
+        {
+            location.setError("Location Field is Empty!");
+            price.setError("Price Field is Empty!");
+            registration.setError("Registration Field is Empty!");
+            mileage.setError("Mileage Field is Empty!");
+            body_color.setError("Body Color Field is Empty!");
+            assembly.setError("Assembly Field is Empty!");
+            description.setError("Description Field is Empty!");
+          // modelno.setError("Model Number Field is Empty!");
+            return false;
+        }
+        else if (location.getText().toString().matches("") || location.getText().toString().matches("[a-zA-Z ]+")) {
+            location.setError("Location Field is Empty!");
+            location.setError("Location Field must have alphabetical characters only!");
+            return false;
+        }
         return true;
     }
 
