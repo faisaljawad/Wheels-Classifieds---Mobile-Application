@@ -9,9 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
-
-
 public class fragment_car extends Fragment {
     @Nullable
     @Override

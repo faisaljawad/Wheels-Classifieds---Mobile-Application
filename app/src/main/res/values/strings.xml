@@ -120,5 +120,11 @@
     <string name="abc"></string>
     <string name="muhammad_mustaqeem">Muhammad Mustaqeem</string>
     <string name="img_prof_pic">img_prof_pic</string>
+    <string name="my_ads">My Ads</string>
+    <string name="my_chats">My Chats</string>
+    <string name="saved_ads">Saved Ads</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="my_alerts">My Alerts</string>
+    <string name="submit">Submit</string>
 </resources>
 

@@ -28,7 +28,7 @@
             android:name=".Login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".New_HomePage"
+            android:name=".app.New_HomePage"
             android:label="Wheels Classifieds" />
         <activity android:name=".ContactUs_Activity" />
         <activity android:name=".forgetpassword" />
@@ -61,7 +61,14 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".Part_ad"></activity>
+        <activity android:name=".Part_ad" />
+        <activity android:name=".myAds" />
+        <activity android:name=".myChats" />
+        <activity android:name=".savedAds" />
+        <activity android:name=".prof_alerts" />
+        <activity android:name=".my_cart" />
+        <activity android:name=".prof_del_account" />
+        <activity android:name=".settings"></activity>
     </application>
 
 </manifest>

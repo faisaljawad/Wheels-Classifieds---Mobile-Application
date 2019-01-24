@@ -51,7 +51,6 @@ public class login_signup extends AppCompatActivity {
         authenticator = FirebaseAuth.getInstance();
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
-
         loginButton = (LoginButton) findViewById(R.id.btnLoginWithFacebook);
         loginButton.setReadPermissions(Arrays.asList("email"));
     }

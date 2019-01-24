@@ -18,7 +18,7 @@ public class forgetpassword extends AppCompatActivity {
 
 
     private EditText pass_email;
-    ImageView submit_btn_forget;
+    Button submit_btn_forget;
     FirebaseAuth firebaseAuth; //firebase Auth is an object here
 
     @Override
@@ -26,7 +26,7 @@ public class forgetpassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgetpassword);
         pass_email=findViewById(R.id.emailforgetpassword);
-        //submit_btn_forget = (ImageView)findViewById(R.id.submitforget_pass);
+        submit_btn_forget = (Button)findViewById(R.id.submit_forgetpass);
         firebaseAuth=FirebaseAuth.getInstance();
         submit_btn_forget.setOnClickListener(new View.OnClickListener() {
             @Override

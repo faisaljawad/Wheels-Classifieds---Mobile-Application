@@ -1,4 +1,4 @@
-package com.example.faisaljawad.wheelsclassifieds;
+package com.example.faisaljawad.wheelsclassifieds.app;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,14 +22,35 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.faisaljawad.wheelsclassifieds.Ad_Category;
+import com.example.faisaljawad.wheelsclassifieds.ContactUs_Activity;
+import com.example.faisaljawad.wheelsclassifieds.R;
+import com.example.faisaljawad.wheelsclassifieds.accessories_fragment;
+import com.example.faisaljawad.wheelsclassifieds.adapter.AdsAdapter;
+import com.example.faisaljawad.wheelsclassifieds.fragment_bikes;
+import com.example.faisaljawad.wheelsclassifieds.fragment_car;
+import com.example.faisaljawad.wheelsclassifieds.login_signup;
+import com.example.faisaljawad.wheelsclassifieds.model.ListDetails;
+import com.example.faisaljawad.wheelsclassifieds.model.Model;
+import com.example.faisaljawad.wheelsclassifieds.profile_activity;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class New_HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private ListView listView;
+    private ArrayList<Model> models;
+    private AdsAdapter adsAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new__home_page);
-
+        listView = (ListView)findViewById(R.id.list_view);
+        models = ListDetails.getList();
+        adsAdapter = new AdsAdapter(New_HomePage.this,models);
+        listView.setAdapter(adsAdapter);
         ListView search_vehicles;
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -112,7 +133,7 @@ public class New_HomePage extends AppCompatActivity
         }
         else if(id == R.id.nav_newad)
         {
-            Intent i = new Intent(this,Ad_Category.class);
+            Intent i = new Intent(this, Ad_Category.class);
             startActivity(i);
         }
         else if(id == R.id.nav_header_title)
@@ -127,7 +148,7 @@ public class New_HomePage extends AppCompatActivity
         }
         else if (id == R.id.nav_profile)
         {
-            Intent i = new Intent(this,profile_activity.class);
+            Intent i = new Intent(this, profile_activity.class);
             startActivity(i);
         }
 
