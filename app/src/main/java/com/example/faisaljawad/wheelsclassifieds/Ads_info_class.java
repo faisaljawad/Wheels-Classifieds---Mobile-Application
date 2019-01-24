@@ -5,7 +5,7 @@ public class Ads_info_class {
 
     }
 
-    public Ads_info_class(String location, String price, String registration, String mileage, String body_color, String assembly, String description) {
+    public Ads_info_class(String location, String price, String registration, String mileage, String body_color, String assembly, String description, String modelno) {
         this.location = location;
         this.price = price;
         this.registration = registration;
@@ -13,9 +13,10 @@ public class Ads_info_class {
         this.body_color = body_color;
         this.assembly = assembly;
         this.description = description;
+        this.modelno = modelno;
     }
 
-    String location,price,registration,mileage,body_color,assembly,description;
+    String location,price,registration,mileage,body_color,assembly,description, modelno;
 
     public String getLocation() {
         return location;
@@ -71,5 +72,13 @@ public class Ads_info_class {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getModelno() {
+        return modelno;
+    }
+
+    public void setModelno(String modelno) {
+        this.modelno = modelno;
     }
 }

@@ -26,7 +26,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import android.provider.MediaStore;
 
 public class Vehicle_Ad extends AppCompatActivity {
-
     EditText location,price,registration,mileage,body_color,assembly,description,modelno;
     DatabaseReference Vehicle_Ads = FirebaseDatabase.getInstance().getReference("Vehicle_Ads");
     public static final int camera_request = 9999;
@@ -94,8 +93,9 @@ public class Vehicle_Ad extends AppCompatActivity {
             String body_color_in = body_color.getText().toString().trim();
             String assembly_in = assembly.getText().toString().trim();
             String description_in = description.getText().toString().trim();
+            String modelno_in=modelno.getText().toString().trim();
             String id = Vehicle_Ads.push().getKey();
-            Ads_info_class car_obj = new Ads_info_class(location_in,price_in,registration_in,mileage_in,body_color_in,assembly_in,description_in);
+            Ads_info_class car_obj = new Ads_info_class(location_in,price_in,registration_in,mileage_in,body_color_in,assembly_in,description_in,modelno_in);
             Vehicle_Ads.child(id).setValue(car_obj);
         }
         else
