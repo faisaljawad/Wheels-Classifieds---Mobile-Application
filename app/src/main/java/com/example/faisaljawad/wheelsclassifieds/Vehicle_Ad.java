@@ -36,7 +36,7 @@ public class Vehicle_Ad extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_ad);
-        transmission =(Spinner)findViewById(R.id.spnTransmission);
+
         Toast.makeText(this, transmission.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
         location = (EditText)findViewById(R.id.edtLocation);
         price = (EditText)findViewById(R.id.edtPrice);
@@ -79,6 +79,7 @@ public class Vehicle_Ad extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.btnForward:
+                transmission =(Spinner)findViewById(R.id.spnTransmission);
                 //add_new_ad();
                 break;
         }
