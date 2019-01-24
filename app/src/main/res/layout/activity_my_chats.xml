@@ -11,7 +11,7 @@
         android:id="@+id/txt_myChats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/my_chats"
+        android:text="my_chats"
         android:textSize="30sp"
         android:layout_centerInParent="true"/>
 </RelativeLayout>

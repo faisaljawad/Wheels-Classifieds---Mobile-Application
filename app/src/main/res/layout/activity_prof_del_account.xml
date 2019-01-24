@@ -11,7 +11,7 @@
         android:id="@+id/txt_prof_del_acc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/delete_account"
+        android:text="delete_account"
         android:textSize="30sp"
         android:layout_centerInParent="true"/>
 

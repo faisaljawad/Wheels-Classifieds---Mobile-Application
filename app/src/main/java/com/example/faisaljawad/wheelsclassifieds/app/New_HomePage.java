@@ -1,5 +1,6 @@
 package com.example.faisaljawad.wheelsclassifieds.app;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,6 +9,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.MenuInflater;
 import android.view.View;
@@ -93,13 +95,22 @@ public class New_HomePage extends AppCompatActivity
             };
 
 
-    @Override
+   @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
            drawer.closeDrawer(GravityCompat.START);
         }
         else {
+            AlertDialog.Builder builder=new AlertDialog.Builder(New_HomePage.this);
+            builder.setTitle("Do you want to Exit?").setMessage("Are you sure?").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    New_HomePage.super.onBackPressed();
+                }
+            }).setNegativeButton("Cancel",null);
+            AlertDialog alert=builder.create();
+            alert.show();
             super.onBackPressed();
         }
     }
@@ -156,4 +167,18 @@ public class New_HomePage extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    /*@Override
+    public void onBackPressed()
+    {
+        AlertDialog.Builder builder=new AlertDialog.Builder(New_HomePage.this);
+        builder.setTitle("Do you want to Exit?").setMessage("Are you sure?").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                New_HomePage.super.onBackPressed();
+            }
+        }).setNegativeButton("Cancel",null);
+        AlertDialog alert=builder.create();
+        alert.show();
+
+    }*/
 }
