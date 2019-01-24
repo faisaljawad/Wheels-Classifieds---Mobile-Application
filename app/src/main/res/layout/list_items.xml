@@ -17,9 +17,9 @@
 
         <ImageView
             android:id="@+id/adImageView"
-            android:layout_width="117dp"
-            android:layout_height="124dp"
-            android:layout_marginTop="70dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/corolla" />
 
         <TextView
@@ -29,6 +29,7 @@
             android:layout_alignTop="@id/adImageView"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="13dp"
             android:layout_toEndOf="@id/adImageView"
             android:layout_toRightOf="@id/adImageView"
@@ -41,6 +42,7 @@
             android:layout_below="@id/adTitle"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@id/adImageView"
             android:layout_toRightOf="@id/adImageView" />

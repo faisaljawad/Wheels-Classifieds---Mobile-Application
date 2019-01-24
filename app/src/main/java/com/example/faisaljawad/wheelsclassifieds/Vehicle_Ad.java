@@ -42,7 +42,7 @@ public class Vehicle_Ad extends AppCompatActivity {
         body_color = (EditText)findViewById(R.id.edtBodyColor);
         assembly = (EditText)findViewById(R.id.edtAssembly);
         description = (EditText)findViewById(R.id.edtDescription);
-        modelno=(EditText)findViewById(R.id.edtPModelNo);
+        modelno=(EditText)findViewById(R.id.edtModel);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -61,7 +61,7 @@ public class Vehicle_Ad extends AppCompatActivity {
             body_color.setError("Body Color Field is Empty!");
             assembly.setError("Assembly Field is Empty!");
             description.setError("Description Field is Empty!");
-          // modelno.setError("Model Number Field is Empty!");
+            modelno.setError("Model Number Field is Empty!");
             return false;
         }
         else if (location.getText().toString().matches("") || location.getText().toString().matches("[a-zA-Z ]+")) {
