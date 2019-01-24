@@ -5,7 +5,7 @@ public class Ads_info_class {
 
     }
 
-    public Ads_info_class(String location, String price, String registration, String mileage, String body_color, String assembly, String description, String modelno) {
+    public Ads_info_class(String location, String price, String registration, String mileage, String body_color, String assembly, String description, String modelno, String transmission, String fuel) {
         this.location = location;
         this.price = price;
         this.registration = registration;
@@ -14,9 +14,27 @@ public class Ads_info_class {
         this.assembly = assembly;
         this.description = description;
         this.modelno = modelno;
+        this.fuel = fuel;
+        this.transmission = transmission;
     }
 
-    String location,price,registration,mileage,body_color,assembly,description, modelno;
+    public String getTransmission() {
+        return transmission;
+    }
+
+    public void setTransmission(String transmission) {
+        this.transmission = transmission;
+    }
+
+    public String getFuel() {
+        return fuel;
+    }
+
+    public void setFuel(String fuel) {
+        this.fuel = fuel;
+    }
+
+    String location,price,registration,mileage,body_color,assembly,description, modelno, transmission, fuel;
 
     public String getLocation() {
         return location;

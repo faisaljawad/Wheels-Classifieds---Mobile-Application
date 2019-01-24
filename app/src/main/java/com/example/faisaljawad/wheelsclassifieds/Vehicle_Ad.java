@@ -37,7 +37,7 @@ public class Vehicle_Ad extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_ad);
         transmission =(Spinner)findViewById(R.id.spnTransmission);
-
+        fuel = (Spinner)findViewById(R.id.spnFuelType);
         location = (EditText)findViewById(R.id.edtLocation);
         price = (EditText)findViewById(R.id.edtPrice);
         registration = (EditText)findViewById(R.id.edtRegistration);
@@ -79,8 +79,7 @@ public class Vehicle_Ad extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.btnForward:
-                Toast.makeText(this, transmission.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-                //add_new_ad();
+                add_new_ad();
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -99,8 +98,10 @@ public class Vehicle_Ad extends AppCompatActivity {
             String assembly_in = assembly.getText().toString().trim();
             String description_in = description.getText().toString().trim();
             String modelno_in=modelno.getText().toString().trim();
+            String transmission_in = transmission.getSelectedItem().toString().trim();
+            String fuel_in = fuel.getSelectedItem().toString().trim();
             String id = Vehicle_Ads.push().getKey();
-            Ads_info_class car_obj = new Ads_info_class(location_in,price_in,registration_in,mileage_in,body_color_in,assembly_in,description_in,modelno_in);
+            Ads_info_class car_obj = new Ads_info_class(location_in,price_in,registration_in,mileage_in,body_color_in,assembly_in,description_in,modelno_in,transmission_in,fuel_in);
             Vehicle_Ads.child(id).setValue(car_obj);
         }
         else
