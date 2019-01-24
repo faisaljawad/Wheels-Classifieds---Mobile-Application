@@ -102,16 +102,20 @@ public class New_HomePage extends AppCompatActivity
            drawer.closeDrawer(GravityCompat.START);
         }
         else {
-            AlertDialog.Builder builder=new AlertDialog.Builder(New_HomePage.this);
-            builder.setTitle("Do you want to Exit?").setMessage("Are you sure?").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    New_HomePage.super.onBackPressed();
-                }
-            }).setNegativeButton("Cancel",null);
-            AlertDialog alert=builder.create();
-            alert.show();
-            super.onBackPressed();
+            new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+                    .setMessage("Are you sure?")
+                    .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            Intent intent = new Intent(Intent.ACTION_MAIN);
+                            intent.addCategory(Intent.CATEGORY_HOME);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }).setNegativeButton("no", null).show();
+            //super.onBackPressed();
         }
     }
 
