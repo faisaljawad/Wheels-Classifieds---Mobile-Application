@@ -14,7 +14,9 @@
 
         <ImageView
             android:id="@+id/img_cst_adp_prof1"
-            android:layout_width="98dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
             android:contentDescription="@string/img_cst_adp_1"
             android:src="@drawable/ic_launcher_background" />
