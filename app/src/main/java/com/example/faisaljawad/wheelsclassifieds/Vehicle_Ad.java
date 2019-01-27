@@ -120,7 +120,6 @@ public class Vehicle_Ad extends AppCompatActivity {
             modelno.setError("Model no Field must have alphabetical characters only!");
             return false;
         }
-
         return true;
     }
 
