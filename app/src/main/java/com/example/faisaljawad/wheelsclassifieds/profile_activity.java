@@ -20,6 +20,15 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class profile_activity extends AppCompatActivity {
 
@@ -37,6 +46,7 @@ public class profile_activity extends AppCompatActivity {
     private int GALLERY_PERMISSION = 2;
 
     ImageView profile_picture;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -219,18 +229,4 @@ public class profile_activity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == CAMERA_PERMISSION)
-        {
-            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-            profile_picture.setImageBitmap(bitmap);
-        }
-        else if(requestCode == GALLERY_PERMISSION)
-        {
-            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-            profile_picture.setImageBitmap(bitmap);
-        }
-    }
 }
