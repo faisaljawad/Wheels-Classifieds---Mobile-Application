@@ -64,7 +64,6 @@ public class New_HomePage extends AppCompatActivity
         adsAdapter = new AdsAdapter(New_HomePage.this,models);
         listView.setAdapter(adsAdapter);
         ListView search_vehicles;
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
