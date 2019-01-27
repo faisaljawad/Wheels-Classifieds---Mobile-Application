@@ -41,20 +41,23 @@ public class SignUp extends AppCompatActivity
             confirmPassword.setError("Confirm Password Field is Empty!");
             return;
         }
-        else if (name.getText().toString().matches("")) {
+        else if (name.getText().toString().matches("") || !name.getText().toString().matches("[a-zA-Z\\s]+")) {
             name.setError("Name Field is Empty!");
+             name.setError("Name must have alphabetical characters only!");
             return;
         }
-        else if (email.getText().toString().matches("")) {
+        else if (email.getText().toString().matches("")||!email.getText().toString().matches("^[a-zA-Z][a-zA-Z0-9._%+-]+@[a-z.-]+\\.[a-z]{2,4}")) {
             email.setError("Email Field is Empty");
+            email.setError("Format not matched!");
             return;
         }
-        else if(password.getText().toString().matches(""))
+        else if(password.getText().toString().matches("") || !password.getText().toString().matches("(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d_#.,$]{6,}"))
         {
             password.setError("Password Field is Empty!");
+            password.setError("Password must have atleast 1 upper case,1 lower case and 1 digit!");
             return;
         }
-        else if(confirmPassword.getText().toString().matches(""))
+        else if(confirmPassword.getText().toString().matches("") || !confirmPassword.getText().toString().matches("(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d_#.,$]{6,}"))
         {
             confirmPassword.setError("Confirm Password Field is Empty!");
             return;
