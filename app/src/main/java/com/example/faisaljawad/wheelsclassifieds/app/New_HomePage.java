@@ -35,6 +35,10 @@ import com.example.faisaljawad.wheelsclassifieds.login_signup;
 import com.example.faisaljawad.wheelsclassifieds.model.ListDetails;
 import com.example.faisaljawad.wheelsclassifieds.model.Model;
 import com.example.faisaljawad.wheelsclassifieds.profile_activity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,11 +49,17 @@ public class New_HomePage extends AppCompatActivity
     private ListView listView;
     private ArrayList<Model> models;
     private AdsAdapter adsAdapter;
+    //DatabaseReference reference;
+    //FirebaseUser user;
+    //FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new__home_page);
         listView = (ListView)findViewById(R.id.list_view);
+        //auth = FirebaseAuth.getInstance();
+        //user = auth.getCurrentUser();
+        //reference = FirebaseDatabase.getInstance().getReference().child(user.getUid());
         models = ListDetails.getList();
         adsAdapter = new AdsAdapter(New_HomePage.this,models);
         listView.setAdapter(adsAdapter);
@@ -95,11 +105,11 @@ public class New_HomePage extends AppCompatActivity
             };
 
 
-   @Override
+    @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
-           drawer.closeDrawer(GravityCompat.START);
+            drawer.closeDrawer(GravityCompat.START);
         }
         else {
             new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
@@ -171,18 +181,5 @@ public class New_HomePage extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    /*@Override
-    public void onBackPressed()
-    {
-        AlertDialog.Builder builder=new AlertDialog.Builder(New_HomePage.this);
-        builder.setTitle("Do you want to Exit?").setMessage("Are you sure?").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                New_HomePage.super.onBackPressed();
-            }
-        }).setNegativeButton("Cancel",null);
-        AlertDialog alert=builder.create();
-        alert.show();
 
-    }*/
 }
