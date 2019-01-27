@@ -87,9 +87,9 @@ public class Vehicle_Ad extends AppCompatActivity {
             price.setError("Price Field must have Numerical values only!");
             return false;
         }
-        else if (registration.getText().toString().equals(null) || registration.getText().toString().matches("[a-zA-Z\\s]+")) {
+        else if (registration.getText().toString().equals(null) || registration.getText().toString().matches("[0-9\\s]+")) {
             registration.setError("Registration Field is Empty!");
-            registration.setError("Registration Field must have Numerical values only!");
+            registration.setError("Registration Location Field must have alphabetical characters only!");
             return false;
         }
         else if (mileage.getText().toString().equals(null) || mileage.getText().toString().matches("[a-zA-Z\\s]+")) {
