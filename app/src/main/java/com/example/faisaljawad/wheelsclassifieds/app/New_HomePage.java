@@ -95,11 +95,11 @@ public class New_HomePage extends AppCompatActivity
             };
 
 
-   @Override
+    @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
-           drawer.closeDrawer(GravityCompat.START);
+            drawer.closeDrawer(GravityCompat.START);
         }
         else {
             new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
@@ -171,18 +171,5 @@ public class New_HomePage extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    /*@Override
-    public void onBackPressed()
-    {
-        AlertDialog.Builder builder=new AlertDialog.Builder(New_HomePage.this);
-        builder.setTitle("Do you want to Exit?").setMessage("Are you sure?").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                New_HomePage.super.onBackPressed();
-            }
-        }).setNegativeButton("Cancel",null);
-        AlertDialog alert=builder.create();
-        alert.show();
 
-    }*/
 }

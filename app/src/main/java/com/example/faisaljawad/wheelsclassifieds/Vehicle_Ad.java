@@ -1,17 +1,10 @@
 package com.example.faisaljawad.wheelsclassifieds;
 
-import android.Manifest;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -38,9 +31,6 @@ public class Vehicle_Ad extends AppCompatActivity {
     Spinner transmission, fuel;
     DatabaseReference Vehicle_Ads = FirebaseDatabase.getInstance().getReference("Vehicle_Ads");
     public static final int camera_request = 9999;
-    public static final int gallery_request = 10000;
-    private int CAMERA_PERMISSION = 1;
-    private int GALLERY_PERMISSION = 2;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -77,26 +67,47 @@ public class Vehicle_Ad extends AppCompatActivity {
             modelno.setError("Model Number Field is Empty!");
             return false;
         }
-       else if (location.getText().toString().equals(null) || location.getText().toString().matches("[0-9.]+")) {
+       else if (location.getText().toString().equals(null) || !location.getText().toString().matches("[a-zA-Z\\s]+")) {
             location.setError("Location Field is Empty!");
             location.setError("Location Field must have alphabetical characters only!");
             return false;
         }
-        else if (price.getText().toString().equals(null) || price.getText().toString().matches("[a-zA-Z\\s]+")) {
+        else if (price.getText().toString().equals(null) || !price.getText().toString().matches("[0-9.]+")) {
             price.setError("Price Field is Empty!");
             price.setError("Price Field must have Numerical values only!");
             return false;
         }
-        else if (registration.getText().toString().equals(null) || registration.getText().toString().matches("[0-9\\s]+")) {
+        else if (registration.getText().toString().equals(null) || !registration.getText().toString().matches("[a-zA-Z\\s]+")) {
             registration.setError("Registration Field is Empty!");
-            registration.setError("Registration Location Field must have alphabetical characters only!");
+            registration.setError("Registration Field must have Numerical values only!");
             return false;
         }
-        else if (mileage.getText().toString().equals(null) || mileage.getText().toString().matches("[a-zA-Z\\s]+")) {
+        else if (mileage.getText().toString().equals(null) || !mileage.getText().toString().matches("[0-9.]+")) {
             mileage.setError("Mileage Field is Empty!");
-            mileage.setError("Registration Field must have Numerical values only!");
+            mileage.setError("Mileage Field must have Numerical values only!");
             return false;
         }
+        else if (body_color.getText().toString().equals(null) || !body_color.getText().toString().matches("[a-zA-Z\\s]+")) {
+            body_color.setError("Body Color Field is Empty!");
+            body_color.setError("Body Color Field must have alphabetical characters only!");
+            return false;
+        }
+        else if (assembly.getText().toString().equals(null) ||  assembly.getText().toString().matches("[^A-Za-z0-9]+")) {
+            assembly.setError("Assembly Field is Empty!");
+            assembly.setError("Assembly Field must have alphabetical characters only!");
+            return false;
+        }
+        else if (description.getText().toString().equals(null) ||  !description.getText().toString().matches("\\s*[a-zA-Z.,\\s]+\\s*")) {
+            description.setError("Description Field is Empty!");
+            description.setError("Description Field must have alphabetical characters only!");
+            return false;
+        }
+        else if (modelno.getText().toString().equals(null) ||  modelno.getText().toString().matches("[a-zA-Z\\s]+")) {
+            modelno.setError("Model no Field is Empty!");
+            modelno.setError("Model no Field must have alphabetical characters only!");
+            return false;
+        }
+
         return true;
     }
 
@@ -135,63 +146,18 @@ public class Vehicle_Ad extends AppCompatActivity {
         }
     }
 
-    public void get_permissons(View view){
-        android.app.AlertDialog.Builder builder = new AlertDialog.Builder(Vehicle_Ad.this);
-        builder.setTitle("Permissions");
-        builder.setMessage("Choose one..");
-        builder.setPositiveButton("Camera", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                if(ContextCompat.checkSelfPermission(Vehicle_Ad.this,Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED){
-                    Intent intention = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(intention,camera_request);
-                }
-                else
-                {
-                    requestCameraPermission();
-                }
-            }
-        });
-
-        builder.setNegativeButton("Gallery", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                if(ContextCompat.checkSelfPermission(Vehicle_Ad.this,Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
-                    Intent intention = new Intent(Intent.ACTION_PICK,MediaStore.Images.Media.INTERNAL_CONTENT_URI);
-                    startActivityForResult(intention,gallery_request);
-                }
-                else
-                {
-                    requestGalleryPermission();
-                }
-            }
-        });
-        builder.show();
-
-
+    public void takePicture(View view){
+        Intent intention = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(intention,camera_request);
     }
 
-    private void requestCameraPermission(){
-        ActivityCompat.requestPermissions(Vehicle_Ad.this,new String[]{Manifest.permission.CAMERA},CAMERA_PERMISSION);
-    }
+    /*@Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-    private void requestGalleryPermission(){
-        ActivityCompat.requestPermissions(Vehicle_Ad.this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},GALLERY_PERMISSION);
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if(requestCode == CAMERA_PERMISSION){
-            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                Intent intention = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intention,camera_request);
-            }
+        if(requestCode == camera_request)
+        {
+            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
         }
-        else if(requestCode == GALLERY_PERMISSION){
-            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                Intent intention = new Intent(Intent.ACTION_PICK,MediaStore.Images.Media.INTERNAL_CONTENT_URI);
-                startActivityForResult(intention,gallery_request);
-            }
-        }
-    }
+    }*/
 }
