@@ -27,11 +27,25 @@
             android:orientation="vertical">
 
 
-            <android.support.v7.widget.AppCompatImageButton
+            <HorizontalScrollView
                 android:layout_width="match_parent"
-                app:srcCompat="@drawable/ic_menu_camera"
-                android:contentDescription="todo"
-                android:layout_height="100dp" />
+                android:layout_height="60pt"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/lnr_layout_partads"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"/>
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/btn_upld_pic__partads"
+                android:text="Upload Pictures"
+                android:onClick="get_permissons"
+                android:layout_width="match_parent"
+                android:layout_height="20pt" />
 
             <TextView
                 android:id="@+id/txtHeaderLocation"

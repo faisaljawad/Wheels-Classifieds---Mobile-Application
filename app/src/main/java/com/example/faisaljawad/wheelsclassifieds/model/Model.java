@@ -26,9 +26,7 @@ public class Model {
         return Ad_Description;
     }
 
-    public void setAd_Description(String ad_Description) {
-        Ad_Description = ad_Description;
-    }
+    public void setAd_Description(String ad_Description) { Ad_Description = ad_Description; }
 
     public Model(int ad_Image, String ad_Title, String ad_Description) {
         Ad_Image = ad_Image;
