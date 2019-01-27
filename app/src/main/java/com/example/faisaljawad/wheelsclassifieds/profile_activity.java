@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -201,8 +202,6 @@ public class profile_activity extends AppCompatActivity {
             }
         });
         builder.show();
-
-
     }
 
     private void requestCameraPermission(){
@@ -229,4 +228,16 @@ public class profile_activity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK && requestCode == camera_request){
+            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+            profile_picture.setImageBitmap(bitmap);
+        }
+        else if(resultCode == RESULT_OK && requestCode == gallery_request){
+            Uri uri = data.getData();
+            profile_picture.setImageURI(uri);
+        }
+    }
 }
