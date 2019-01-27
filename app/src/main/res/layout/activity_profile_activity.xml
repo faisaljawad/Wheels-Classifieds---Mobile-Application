@@ -26,6 +26,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:contentDescription="profile pictue"
+            android:onClick="get_permissons"
             android:layout_gravity="center"
             android:src="@drawable/img_profile_pic" />
 
