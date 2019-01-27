@@ -81,16 +81,18 @@ public class SignUp extends AppCompatActivity
 
     private void add_user()
     {
-        String name_in = name.getText().toString().trim();
         String email_in = email.getText().toString().trim();
         String password_in = password.getText().toString().trim();
-        String id = users.push().getKey();
-        user_info_class user_obj = new user_info_class(name_in,email_in,password_in);
-        users.child(id).setValue(user_obj);
         auth.createUserWithEmailAndPassword(email_in,password_in).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
+                    String name_in = name.getText().toString().trim();
+                    String email_in = email.getText().toString().trim();
+                    String password_in = password.getText().toString().trim();
+                    String id = users.push().getKey();
+                    user_info_class user_obj = new user_info_class(name_in,email_in,password_in);
+                    users.child(id).setValue(user_obj);
                     Toast.makeText(SignUp.this, "Sign-Up Successful", Toast.LENGTH_LONG).show();
                     Intent i = new Intent(SignUp.this,Login.class);
                     startActivity(i);
