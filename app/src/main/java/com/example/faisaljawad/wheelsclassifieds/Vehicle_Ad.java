@@ -14,6 +14,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +23,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -56,6 +58,17 @@ public class Vehicle_Ad extends AppCompatActivity {
         assembly = (EditText)findViewById(R.id.edtAssembly);
         description = (EditText)findViewById(R.id.edtDescription);
         modelno=(EditText)findViewById(R.id.edtModel);
+
+        LinearLayout linearLayout = findViewById(R.id.lnr_layout_ads);
+        LayoutInflater layoutInflater = LayoutInflater.from(Vehicle_Ad.this);
+
+        for(int i = 0; i < 6;i++){
+            View view = layoutInflater.inflate(R.layout.dynamic_img_view,linearLayout,false);
+            ImageView imageView = (ImageView) view.findViewById(R.id.img_dynamic_view);
+            imageView.setImageResource(R.drawable.test_pic_for_ads_posting);
+
+            linearLayout.addView(view);
+        }
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

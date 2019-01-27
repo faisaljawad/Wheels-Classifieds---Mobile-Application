@@ -26,15 +26,25 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imgAdImages"
+            <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:contentDescription="todo"
+                android:layout_height="60pt"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/lnr_layout_ads"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"/>
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/btn_upld_pic_ads"
+                android:text="Upload Pictures"
                 android:onClick="get_permissons"
-                app:srcCompat="@drawable/ic_menu_camera"
-                tools:layout_editor_absoluteX="74dp"
-                tools:layout_editor_absoluteY="0dp" />
+                android:layout_width="match_parent"
+                android:layout_height="20pt" />
 
             <TextView
                 android:id="@+id/txtHeaderLocation"

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60pt"
+    android:layout_height="60pt">
+
+    <ImageView
+        android:id="@+id/img_dynamic_view"
+        android:layout_width="60pt"
+        android:layout_height="60pt"
+        android:src="@drawable/img_profile_pic"/>
+
+</LinearLayout>
